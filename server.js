@@ -3,6 +3,10 @@
 const express = require('express');
 const oracledb = require('oracledb');
 const cors = require('cors'); // CORS 미들웨어
+const bcrypt = require('bcryptjs');
+const multer = require('multer');
+const fs = require('fs');
+const upload = multer({ dest: 'uploads/' });
 
 // Node.js 애플리케이션 포트 설정
 const PORT = process.env.PORT || 3000;
@@ -10,17 +14,38 @@ const PORT = process.env.PORT || 3000;
 // Oracle DB 연결 설정
 // 보안을 위해 실제 운영 환경에서는 비밀번호를 환경 변수, Vault 서비스 등을 통해 관리해야 합니다.
 const dbConfig = {
-    user: "TSUBAKIAPP",
-    password: "tsubaki1234",
-    connectString: "localhost:1521/XEPDB1"
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    connectString: process.env.DB_CONNECT_STRING
 };
-
 const app = express();
+app.use(express.json());
+
+async function ensureAdmin() {
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        const res = await connection.execute(`SELECT COUNT(*) AS CNT FROM USERS WHERE USERNAME = :u`, {u: 'admin'}, { outFormat: oracledb.OUT_FORMAT_OBJECT });
+        if (res.rows[0].CNT === 0) {
+            const hashed = await bcrypt.hash('admin', 10);
+            await connection.execute(`INSERT INTO USERS (USERNAME, PASSWORD_HASH, ROLE) VALUES ('admin', :p, 'admin')`, {p: hashed}, { autoCommit: true });
+            console.log('Default admin user created.');
+        }
+    } catch (err) {
+        console.error('Error ensuring admin user:', err);
+    } finally {
+        if (connection) {
+            try { await connection.close(); } catch (err) { console.error('Error closing Oracle connection:', err); }
+        }
+    }
+}
+ensureAdmin();
 
 // CORS 설정: 모든 출처에서의 요청을 허용합니다. (개발 환경용)
 // 실제 운영 환경에서는 보안을 위해 특정 도메인만 허용하도록 변경해야 합니다.
 // 예: app.use(cors({ origin: 'http://localhost:5500' }));
 app.use(cors());
+if (!fs.existsSync("uploads")) { fs.mkdirSync("uploads"); }
 
 // Oracle Client 라이브러리 경로 초기화
 // *** 중요: 이곳을 자신의 Oracle Instant Client가 설치된 경로로 정확히 수정해주세요. ***
@@ -28,15 +53,20 @@ app.use(cors());
 // Windows: 'C:\instantclient-basic-windows.x64-23.8.0.25.04\instantclient_23_8'
 // macOS: '/Users/yourusername/Downloads/instantclient_21_9'
 // Linux: '/opt/oracle/instantclient_21_9'
-try {
-    oracledb.initOracleClient({ libDir: 'C:\\instantclient-basic-windows.x64-23.8.0.25.04\\instantclient_23_8' }); // <-- 이 부분을 수정하세요!
-    console.log('Oracle Client initialized successfully.');
-} catch (err) {
-    console.error('Error initializing Oracle Client:', err);
-    console.error('Please ensure Oracle Instant Client is installed and libDir path is correct.');
-    process.exit(1); // 클라이언트 초기화 실패 시 애플리케이션 종료
-}
 
+const clientLibDir = process.env.ORACLE_CLIENT_LIBDIR;
+if (clientLibDir) {
+    try {
+        oracledb.initOracleClient({ libDir: clientLibDir });
+        console.log('Oracle Client initialized successfully.');
+    } catch (err) {
+        console.error('Error initializing Oracle Client:', err);
+        console.error('Please ensure Oracle Instant Client is installed and libDir path is correct.');
+        process.exit(1);
+    }
+} else {
+    console.warn('ORACLE_CLIENT_LIBDIR 환경 변수가 설정되지 않았습니다. 기본 경로를 사용합니다.');
+}
 // 각 테이블에 대한 API 엔드포인트 정의
 // 이 배열의 각 문자열은 Oracle DB의 실제 테이블 이름과 일치해야 합니다.
 const tables = [
@@ -104,6 +134,162 @@ tables.forEach(tableName => {
             }
         }
     });
+});
+
+// 회원가입
+app.post('/api/register', async (req, res) => {
+    const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).send('Missing username or password');
+    }
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        const hashed = await bcrypt.hash(password, 10);
+        await connection.execute(
+            `INSERT INTO USERS (USERNAME, PASSWORD_HASH, ROLE) VALUES (:u, :p, 'user')`,
+            { u: username, p: hashed },
+            { autoCommit: true }
+        );
+        res.status(201).send('User registered');
+    } catch (err) {
+        console.error('Error registering user:', err);
+        res.status(500).send('Registration failed');
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error closing Oracle connection:', err);
+            }
+        }
+    }
+});
+
+// 로그인
+app.post('/api/login', async (req, res) => {
+    const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).send('Missing username or password');
+    }
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        const result = await connection.execute(
+            `SELECT PASSWORD_HASH, ROLE FROM USERS WHERE USERNAME = :u`,
+            { u: username },
+            { outFormat: oracledb.OUT_FORMAT_OBJECT }
+        );
+        if (result.rows.length === 0) {
+            return res.status(401).send('Invalid credentials');
+        }
+        const hashed = result.rows[0].PASSWORD_HASH;
+        const role = result.rows[0].ROLE;
+        const match = await bcrypt.compare(password, hashed);
+        if (!match) {
+            return res.status(401).send('Invalid credentials');
+        }
+        res.json({ success: true, role });
+    } catch (err) {
+        console.error('Error logging in:', err);
+        res.status(500).send('Login failed');
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error closing Oracle connection:', err);
+            }
+        }
+    }
+});
+
+// 비밀번호 변경
+app.post('/api/change-password', async (req, res) => {
+    const { username, oldPassword, newPassword } = req.body;
+    if (!username || !oldPassword || !newPassword) {
+        return res.status(400).send('Missing parameters');
+    }
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        const result = await connection.execute(
+            `SELECT PASSWORD_HASH FROM USERS WHERE USERNAME = :u`,
+            { u: username },
+            { outFormat: oracledb.OUT_FORMAT_OBJECT }
+        );
+        if (result.rows.length === 0) {
+            return res.status(404).send('User not found');
+        }
+        const match = await bcrypt.compare(oldPassword, result.rows[0].PASSWORD_HASH);
+        if (!match) {
+            return res.status(401).send('Invalid credentials');
+        }
+        const hashed = await bcrypt.hash(newPassword, 10);
+        await connection.execute(
+            `UPDATE USERS SET PASSWORD_HASH = :p WHERE USERNAME = :u`,
+            { p: hashed, u: username },
+            { autoCommit: true }
+        );
+        res.send('Password updated');
+    } catch (err) {
+        console.error('Error updating password:', err);
+        res.status(500).send('Password change failed');
+    } finally {
+        if (connection) {
+            try { await connection.close(); } catch (err) { console.error('Error closing Oracle connection:', err); }
+        }
+    }
+});
+
+// 이미지 업로드 (관리자용)
+app.post('/api/admin/upload-image', upload.single('image'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).send('No file');
+    }
+    res.json({ path: req.file.path });
+});
+
+// 제품 추가 (관리자용)
+app.post('/api/admin/add-product', async (req, res) => {
+    const { table, data } = req.body;
+    if (!table || !data) return res.status(400).send('Missing parameters');
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        await connection.execute(
+            `INSERT INTO ${table} (DATA_COLUMN) VALUES (:d)`,
+            { d: JSON.stringify(data) },
+            { autoCommit: true }
+        );
+        res.send('Product added');
+    } catch (err) {
+        console.error('Error adding product:', err);
+        res.status(500).send('Add failed');
+    } finally {
+        if (connection) { try { await connection.close(); } catch (err) { console.error('Error closing Oracle connection:', err); } }
+    }
+});
+
+// 제품 수정 (관리자용)
+app.put('/api/admin/update-product', async (req, res) => {
+    const { table, id, data } = req.body;
+    if (!table || !id || !data) return res.status(400).send('Missing parameters');
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        await connection.execute(
+            `UPDATE ${table} SET DATA_COLUMN = :d WHERE ID = :id`,
+            { d: JSON.stringify(data), id },
+            { autoCommit: true }
+        );
+        res.send('Product updated');
+    } catch (err) {
+        console.error('Error updating product:', err);
+        res.status(500).send('Update failed');
+    } finally {
+        if (connection) { try { await connection.close(); } catch (err) { console.error('Error closing Oracle connection:', err); } }
+    }
 });
 
 // 서버 시작

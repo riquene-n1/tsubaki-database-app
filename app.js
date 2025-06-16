@@ -132,8 +132,10 @@ class TsubakiDatabase {
     setupEventListeners() {
         // ... (기존과 동일)
         document.getElementById('loginBtn').addEventListener('click', () => this.showLoginModal());
+        document.getElementById('signupBtn').addEventListener('click', () => this.showSignupModal());
         document.getElementById('logoutBtn').addEventListener('click', () => this.logout());
         document.getElementById('submitLogin').addEventListener('click', () => this.handleLogin());
+        document.getElementById('submitSignup').addEventListener('click', () => this.handleSignup());
         document.getElementById('themeToggle').addEventListener('click', () => this.toggleTheme());
 
         document.getElementById('categoryGrid').addEventListener('click', (e) => {
@@ -144,7 +146,7 @@ class TsubakiDatabase {
         });
 
         document.getElementById('showAllProductsBtn').addEventListener('click', () => this.showAllProducts());
-        document.getElementById('searchInput').addEventListener('input', (e) => this.searchProducts(e.target.value));
+        document.getElementById('mainSearch').addEventListener('input', (e) => this.searchProducts(e.target.value));
         document.getElementById('sortSelect').addEventListener('change', (e) => this.sortProducts(e.target.value));
         document.getElementById('prevPage').addEventListener('click', () => this.changePage(-1));
         document.getElementById('nextPage').addEventListener('click', () => this.changePage(1));
@@ -190,22 +192,64 @@ class TsubakiDatabase {
         document.getElementById('loginSection').classList.add('hidden');
     }
 
+    showSignupModal() {
+        document.getElementById('signupSection').classList.remove('hidden');
+        document.getElementById('newUsername').value = '';
+        document.getElementById('newPassword').value = '';
+        document.getElementById('signupError').classList.add('hidden');
+    }
+
+    hideSignupModal() {
+        document.getElementById('signupSection').classList.add('hidden');
+    }
+
     async handleLogin() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const loginError = document.getElementById('loginError');
 
-        // 실제 환경에서는 백엔드 API를 호출하여 인증
-        // 여기서는 간단한 임시 인증
-        if (username === 'admin' && password === 'admin123') {
-            isLoggedIn = true;
-            currentUser = username;
-            this.hideLoginModal();
-            document.getElementById('loginBtn').classList.add('hidden');
-            document.getElementById('logoutBtn').classList.remove('hidden');
-            alert('로그인 성공!');
-        } else {
+        try {
+            const res = await fetch('http://localhost:3000/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+            if (res.ok) {
+                isLoggedIn = true;
+                currentUser = username;
+                this.hideLoginModal();
+                document.getElementById('loginBtn').classList.add('hidden');
+                document.getElementById('logoutBtn').classList.remove('hidden');
+                alert('로그인 성공!');
+            } else {
+                loginError.classList.remove('hidden');
+            }
+        } catch (err) {
+            console.error('Login error:', err);
             loginError.classList.remove('hidden');
+        }
+    }
+
+    async handleSignup() {
+        const username = document.getElementById('newUsername').value;
+        const password = document.getElementById('newPassword').value;
+        const signupError = document.getElementById('signupError');
+
+        try {
+            const res = await fetch('http://localhost:3000/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+            if (res.ok) {
+                alert('회원가입 성공! 로그인해주세요.');
+                this.hideSignupModal();
+            } else {
+                signupError.classList.remove('hidden');
+            }
+        } catch (err) {
+            console.error('Signup error:', err);
+            signupError.classList.remove('hidden');
         }
     }
 
@@ -310,7 +354,7 @@ class TsubakiDatabase {
     }
 
     renderProducts() {
-        const productGrid = document.getElementById('productGrid');
+        const productGrid = document.getElementById('productsGrid');
         productGrid.innerHTML = '';
         const start = (this.currentPage - 1) * this.pageSize;
         const end = start + this.pageSize;
@@ -406,10 +450,10 @@ class TsubakiDatabase {
             // this.filteredProducts = [...this.products]; // 모든 제품 보여주기로 초기화 (선택 사항)
             // this.currentPage = 1;
             // this.renderProducts();
-            // productSection 내의 다른 요소들은 그대로 둠 (검색, 필터 등)
+            // productsSection 내의 다른 요소들은 그대로 둠 (검색, 필터 등)
             document.getElementById('currentCategoryTitle').textContent = '모든 제품'; // 또는 현재 선택된 카테고리 이름
         } else if (sectionId === 'home') {
-            document.getElementById('productSection').classList.add('hidden'); // 제품 섹션 숨기기
+            document.getElementById('productsSection').classList.add('hidden'); // 제품 섹션 숨기기
         }
     }
 }

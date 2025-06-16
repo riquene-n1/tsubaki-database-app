@@ -18,16 +18,17 @@
 | **케이블 캐리어** | 5개 | TKP 시리즈 |
 
 ## 📁 파일 구성
+애플리케이션은 `to_oracle` 폴더의 JSON 파일을 Oracle DB에 적재하여 사용합니다.
+루트에 있는 `tsubaki_complete_database.json`과 `.csv` 파일은 참고용 데이터이며, 실행에는 필요하지 않습니다.
 
-### 1. `tsubaki_complete_database.json` (8.7MB)
-- **형식**: JSON
-- **용도**: 웹앱 개발, API 연동
-- **특징**: 완전한 구조화된 데이터, 중첩 객체 포함
+## 🔑 로그인 및 회원가입
+서버는 `/api/login`과 `/api/register` 엔드포인트를 제공하여 사용자 인증을 처리합니다.
+Oracle DB의 `USERS` 테이블에 아이디와 암호 해시가 저장되며,
+프론트엔드의 **회원가입** 버튼으로 새 계정을 만들 수 있습니다.
 
-### 2. `tsubaki_complete_database.csv` 
-- **형식**: CSV (UTF-8 BOM)
-- **용도**: Excel, 데이터 분석
-- **특징**: 50개 컬럼, 평면화된 데이터
+### to_oracle 폴더
+- 각 카테고리별 JSON 파일과 Java 로더 스크립트 포함
+- `CsvToOracleLoader.java` 실행 후 Oracle DB에 데이터가 저장됩니다.
 
 ## 🔍 주요 데이터 필드
 

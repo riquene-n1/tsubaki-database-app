@@ -15,6 +15,8 @@
       <button id="loginBtn">🔐 로그인</button>
       <button id="signupBtn">📝 회원가입</button>
       <button id="logoutBtn" class="hidden">🚪 로그아웃</button>
+      <button id="changePasswordBtn" class="hidden">🔑 비밀번호 변경</button>
+      <button id="adminPageBtn" class="hidden">🛠️ 관리</button>
       <button id="themeToggle">🌙 다크모드</button>
     </div>
   </header>
@@ -38,6 +40,15 @@
     </div>
   </div>
 
+  <div id="changePasswordSection" class="hidden login-section">
+    <div class="login-form">
+      <h2>비밀번호 변경</h2>
+      <input type="password" id="oldPassword" placeholder="현재 비밀번호" />
+      <input type="password" id="newPass" placeholder="새 비밀번호" />
+      <button id="submitChangePassword">변경</button>
+      <p id="changePwError" class="error-message hidden">❌ 변경 실패</p>
+    </div>
+  </div>
   <main>
     <section class="hero">
       <h2>당신의 산업 파트너, Tsubaki</h2>
@@ -126,6 +137,24 @@
       <p>필터 및 검색을 이용해 제품을 탐색하고, 상세 정보를 확인하세요.</p>
     </section>
   </main>
+    <section id="adminSection" class="hidden admin-section">
+      <button id="backToHomeFromAdmin">← 홈으로</button>
+      <h3>관리자 페이지</h3>
+      <form id="addProductForm">
+        <input type="text" id="addTable" placeholder="테이블명" />
+        <textarea id="addData" placeholder="JSON 데이터"></textarea>
+        <button type="submit">추가</button>
+      </form>
+      <form id="updateProductForm">
+        <input type="text" id="updateTable" placeholder="테이블명" />
+        <input type="text" id="updateId" placeholder="ID" />
+        <textarea id="updateData" placeholder="JSON 데이터"></textarea>
+        <button type="submit">수정</button>
+      </form>
+      <input type="file" id="imageFile" />
+      <button id="uploadImageBtn">이미지 업로드</button>
+      <div id="adminMsg"></div>
+    </section>
 
   <footer>
     <nav class="nav-menu">

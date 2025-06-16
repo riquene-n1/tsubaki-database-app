@@ -178,6 +178,13 @@ class TsubakiDatabase {
         document.getElementById('backToHomeFromProducts').addEventListener('click', () => this.showSection('home'));
         // Back to home from guide
         document.getElementById('backToHomeFromGuide').addEventListener('click', () => this.showSection('home'));
+        document.getElementById('changePasswordBtn').addEventListener('click', () => this.showChangePasswordModal());
+        document.getElementById('submitChangePassword').addEventListener('click', () => this.handleChangePassword());
+        document.getElementById('adminPageBtn').addEventListener('click', () => this.showAdminPage());
+        document.getElementById('backToHomeFromAdmin').addEventListener('click', () => this.hideAdminPage());
+        document.getElementById('addProductForm').addEventListener('submit', (e) => this.handleAddProduct(e));
+        document.getElementById('updateProductForm').addEventListener('submit', (e) => this.handleUpdateProduct(e));
+        document.getElementById('uploadImageBtn').addEventListener('click', () => this.uploadImage());
     }
 
     showLoginModal() {
@@ -203,30 +210,128 @@ class TsubakiDatabase {
         document.getElementById('signupSection').classList.add('hidden');
     }
 
+    showChangePasswordModal() {
+        document.getElementById('changePasswordSection').classList.remove('hidden');
+        document.getElementById('oldPassword').value = '';
+        document.getElementById('newPass').value = '';
+        document.getElementById('changePwError').classList.add('hidden');
+    }
+
+    hideChangePasswordModal() {
+        document.getElementById('changePasswordSection').classList.add('hidden');
+    }
+
+    showAdminPage() {
+        document.getElementById('adminSection').classList.remove('hidden');
+    }
+
+    hideAdminPage() {
+        document.getElementById('adminSection').classList.add('hidden');
+    }
+
+    async handleChangePassword() {
+        const oldPassword = document.getElementById('oldPassword').value;
+        const newPass = document.getElementById('newPass').value;
+        const errMsg = document.getElementById('changePwError');
+        try {
+            const res = await fetch('http://localhost:3000/api/change-password', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: currentUser, oldPassword, newPassword: newPass })
+            });
+            if (res.ok) {
+                alert('변경 완료');
+                this.hideChangePasswordModal();
+            } else {
+                errMsg.classList.remove('hidden');
+            }
+        } catch (err) {
+            console.error('Password change error:', err);
+            errMsg.classList.remove('hidden');
+        }
+    }
+
+    async uploadImage() {
+        const fileInput = document.getElementById('imageFile');
+        if (!fileInput.files.length) return;
+        const formData = new FormData();
+        formData.append('image', fileInput.files[0]);
+        const res = await fetch('http://localhost:3000/api/admin/upload-image', {
+            method: 'POST',
+            body: formData
+        });
+        const data = await res.json();
+        return data.path;
+    }
+
+    async handleAddProduct(e) {
+        e.preventDefault();
+        const table = document.getElementById('addTable').value;
+        const dataText = document.getElementById('addData').value;
+        try {
+            const imagePath = await this.uploadImage();
+            const data = JSON.parse(dataText);
+            if (imagePath) data.image = imagePath;
+            await fetch('http://localhost:3000/api/admin/add-product', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ table, data })
+            });
+            document.getElementById('adminMsg').textContent = '추가 완료';
+        } catch (err) {
+            console.error('Add product error:', err);
+            document.getElementById('adminMsg').textContent = '오류 발생';
+        }
+    }
+
+    async handleUpdateProduct(e) {
+        e.preventDefault();
+        const table = document.getElementById('updateTable').value;
+        const id = document.getElementById('updateId').value;
+        const dataText = document.getElementById('updateData').value;
+        try {
+            const data = JSON.parse(dataText);
+            await fetch('http://localhost:3000/api/admin/update-product', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ table, id, data })
+            });
+            document.getElementById('adminMsg').textContent = '수정 완료';
+        } catch (err) {
+            console.error('Update product error:', err);
+            document.getElementById('adminMsg').textContent = '오류 발생';
+        }
+    }
+
     async handleLogin() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const loginError = document.getElementById('loginError');
 
         try {
-            const res = await fetch('http://localhost:3000/api/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+            const res = await fetch("http://localhost:3000/api/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password })
             });
-            if (res.ok) {
+            const data = await res.json();
+            if (res.ok && data.success) {
                 isLoggedIn = true;
                 currentUser = username;
                 this.hideLoginModal();
-                document.getElementById('loginBtn').classList.add('hidden');
-                document.getElementById('logoutBtn').classList.remove('hidden');
-                alert('로그인 성공!');
+                document.getElementById("loginBtn").classList.add("hidden");
+                document.getElementById("logoutBtn").classList.remove("hidden");
+                document.getElementById("changePasswordBtn").classList.remove("hidden");
+                if (data.role === "admin") {
+                    document.getElementById("adminPageBtn").classList.remove("hidden");
+                }
+                alert("로그인 성공!");
             } else {
-                loginError.classList.remove('hidden');
+                loginError.classList.remove("hidden");
             }
         } catch (err) {
-            console.error('Login error:', err);
-            loginError.classList.remove('hidden');
+            console.error("Login error:", err);
+            loginError.classList.remove("hidden");
         }
     }
 
@@ -256,8 +361,14 @@ class TsubakiDatabase {
     logout() {
         isLoggedIn = false;
         currentUser = null;
-        document.getElementById('loginBtn').classList.remove('hidden');
-        document.getElementById('logoutBtn').classList.add('hidden');
+        document.getElementById("loginBtn").classList.remove("hidden");
+        document.getElementById("logoutBtn").classList.add("hidden");
+        document.getElementById("changePasswordBtn").classList.add("hidden");
+        document.getElementById("adminPageBtn").classList.add("hidden");
+        this.hideChangePasswordModal();
+        this.hideAdminPage();
+        alert("로그아웃되었습니다.");
+    }
         alert('로그아웃되었습니다.');
     }
 

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsubaki Chain 제품 데이터베이스</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <h1>TSUBAKI</h1>
+                    <span class="header__tagline">Innovation in Motion</span>
+                </div>
+                <div class="header__controls">
+                    <button class="btn btn--outline" id="themeToggle">🌙 다크모드</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- 홈페이지 섹션 -->
+        <section class="hero" id="heroSection">
+            <div class="container">
+                <div class="hero__content">
+                    <h2 class="hero__title">Tsubaki Chain 제품 데이터베이스</h2>
+                    <p class="hero__subtitle">전세계 최고 품질의 체인 및 동력전달 제품</p>
+                    
+                    <div class="hero__stats">
+                        <div class="stat-card">
+                            <div class="stat-card__number" id="totalProducts">12,140</div>
+                            <div class="stat-card__label">총 제품 수</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">8</div>
+                            <div class="stat-card__label">제품 카테고리</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">40+</div>
+                            <div class="stat-card__label">전세계 국가</div>
+                        </div>
+                    </div>
+                    
+                    <div class="search-hero">
+                        <input type="text" class="form-control search-hero__input" id="mainSearch" placeholder="제품명, 모델, Tsubaki 코드로 검색...">
+                        <button class="btn btn--primary search-hero__button" id="searchBtn">검색</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 카테고리 개요 -->
+        <section class="categories" id="categoriesSection">
+            <div class="container">
+                <h3 class="section-title">제품 카테고리</h3>
+                <div class="category-grid" id="categoryGrid">
+                    <!-- 카테고리 카드들이 여기에 동적으로 생성됩니다 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 제품 검색 및 필터링 섹션 -->
+        <section class="products-section hidden" id="productsSection">
+            <div class="container">
+                <div class="products-header">
+                    <h3 class="section-title">제품 검색</h3>
+                    <button class="btn btn--outline" id="backToHome">← 홈으로</button>
+                </div>
+                
+                <div class="filters-panel">
+                    <div class="filter-group">
+                        <label class="form-label">카테고리</label>
+                        <select class="form-control" id="categoryFilter">
+                            <option value="">모든 카테고리</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="form-label">시리즈</label>
+                        <select class="form-control" id="seriesFilter">
+                            <option value="">모든 시리즈</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="form-label">피치(mm)</label>
+                        <select class="form-control" id="pitchFilter">
+                            <option value="">모든 피치</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="form-label">재료</label>
+                        <select class="form-control" id="materialFilter">
+                            <option value="">모든 재료</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <button class="btn btn--secondary" id="clearFilters">필터 초기화</button>
+                    </div>
+                </div>
+                
+                <div class="products-controls">
+                    <div class="results-count">
+                        <span id="resultsCount">0개 제품</span>
+                    </div>
+                    <div class="view-controls">
+                        <button class="btn btn--outline btn--sm" id="exportBtn">CSV 내보내기</button>
+                    </div>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- 제품 카드들이 여기에 동적으로 생성됩니다 -->
+                </div>
+                
+                <div class="pagination" id="pagination">
+                    <!-- 페이지네이션이 여기에 생성됩니다 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 제품 상세 모달 -->
+        <div class="modal hidden" id="productModal">
+            <div class="modal__backdrop" id="modalBackdrop"></div>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h3 class="modal__title" id="modalTitle">제품 상세정보</h3>
+                    <button class="modal__close" id="modalClose">×</button>
+                </div>
+                <div class="modal__body" id="modalBody">
+                    <!-- 제품 상세정보가 여기에 동적으로 생성됩니다 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 엔지니어링 계산기 섹션 -->
+        <section class="calculator-section hidden" id="calculatorSection">
+            <div class="container">
+                <div class="products-header">
+                    <h3 class="section-title">엔지니어링 계산기</h3>
+                    <button class="btn btn--outline" id="backToHomeFromCalc">← 홈으로</button>
+                </div>
+                
+                <div class="calculator-tabs">
+                    <button class="tab-btn active" data-tab="scientific">과학 계산기</button>
+                    <button class="tab-btn" data-tab="chain">체인 계산기</button>
+                </div>
+                
+                <div class="calculator-content">
+                    <div class="calculator-panel active" id="scientificCalc">
+                        <div class="calc-display">
+                            <input type="text" class="calc-input" id="calcDisplay" readonly>
+                        </div>
+                        <div class="calc-buttons">
+                            <button class="calc-btn calc-btn--clear" onclick="clearCalc()">C</button>
+                            <button class="calc-btn" onclick="deleteLast()">⌫</button>
+                            <button class="calc-btn calc-btn--operator" onclick="appendToCalc('/')">/</button>
+                            <button class="calc-btn calc-btn--operator" onclick="appendToCalc('*')">×</button>
+                            
+                            <button class="calc-btn" onclick="appendToCalc('7')">7</button>
+                            <button class="calc-btn" onclick="appendToCalc('8')">8</button>
+                            <button class="calc-btn" onclick="appendToCalc('9')">9</button>
+                            <button class="calc-btn calc-btn--operator" onclick="appendToCalc('-')">-</button>
+                            
+                            <button class="calc-btn" onclick="appendToCalc('4')">4</button>
+                            <button class="calc-btn" onclick="appendToCalc('5')">5</button>
+                            <button class="calc-btn" onclick="appendToCalc('6')">6</button>
+                            <button class="calc-btn calc-btn--operator" onclick="appendToCalc('+')">+</button>
+                            
+                            <button class="calc-btn" onclick="appendToCalc('1')">1</button>
+                            <button class="calc-btn" onclick="appendToCalc('2')">2</button>
+                            <button class="calc-btn" onclick="appendToCalc('3')">3</button>
+                            <button class="calc-btn calc-btn--equals" onclick="calculateResult()" rowspan="2">=</button>
+                            
+                            <button class="calc-btn calc-btn--wide" onclick="appendToCalc('0')">0</button>
+                            <button class="calc-btn" onclick="appendToCalc('.')">.</button>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-panel hidden" id="chainCalc">
+                        <div class="chain-calc-forms">
+                            <div class="calc-form">
+                                <h4>체인 속도 계산</h4>
+                                <p class="formula">V = (P × Z × N) / 1000</p>
+                                <div class="form-group">
+                                    <label class="form-label">피치 P (mm)</label>
+                                    <input type="number" class="form-control" id="pitch" step="0.1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">스프로켓 잇수 Z</label>
+                                    <input type="number" class="form-control" id="teeth">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">회전수 N (rpm)</label>
+                                    <input type="number" class="form-control" id="rpm">
+                                </div>
+                                <button class="btn btn--primary" onclick="calculateChainSpeed()">속도 계산</button>
+                                <div class="result" id="speedResult"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 제품 번호 가이드 섹션 -->
+        <section class="guide-section hidden" id="guideSection">
+            <div class="container">
+                <div class="products-header">
+                    <h3 class="section-title">제품 번호 가이드</h3>
+                    <button class="btn btn--outline" id="backToHomeFromGuide">← 홈으로</button>
+                </div>
+                
+                <div class="guide-content">
+                    <div class="guide-card">
+                        <h4>드라이브 체인 코드 구조</h4>
+                        <div class="code-example">
+                            <div class="code-segment">RS</div>
+                            <div class="code-segment">80</div>
+                            <div class="code-segment">-1</div>
+                            <div class="code-segment">-G8</div>
+                        </div>
+                        <div class="code-explanation">
+                            <div>시리즈</div>
+                            <div>피치 번호</div>
+                            <div>스트랜드 수</div>
+                            <div>특수 기능</div>
+                        </div>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h4>스프로켓 코드 구조</h4>
+                        <div class="code-example">
+                            <div class="code-segment">SP</div>
+                            <div class="code-segment">80</div>
+                            <div class="code-segment">-15T</div>
+                            <div class="code-segment">-B</div>
+                        </div>
+                        <div class="code-explanation">
+                            <div>제품 타입</div>
+                            <div>체인 번호</div>
+                            <div>잇수</div>
+                            <div>허브 타입</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 네비게이션 메뉴 -->
+    <nav class="nav-menu">
+        <div class="container">
+            <div class="nav-items">
+                <button class="nav-item active" data-section="home">홈</button>
+                <button class="nav-item" data-section="products">제품 검색</button>
+                <button class="nav-item" data-section="calculator">계산기</button>
+                <button class="nav-item" data-section="guide">제품 번호 가이드</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 로딩 표시 -->
+    <div class="loading hidden" id="loading">
+        <div class="loading__spinner"></div>
+        <div class="loading__text">데이터 로딩 중...</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "tsubaki-database-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riquene-n1/tsubaki_selection_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riquene-n1/tsubaki_selection_app/issues"
+  },
+  "homepage": "https://github.com/riquene-n1/tsubaki_selection_app#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "oracledb": "^6.8.0"
+  }
+}

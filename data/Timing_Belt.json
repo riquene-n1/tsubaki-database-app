@@ -1,0 +1,1170 @@
+{
+  "metadata": {
+    "category": "Timing Belt",
+    "product_count": 40,
+    "last_updated": "2024-12-08",
+    "version": "2.0"
+  },
+  "products": [
+    {
+      "id": "TSK_0327",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P2M-6",
+      "name": "PX P2M Timing Belt Width 6mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 6,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P2M-6-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0328",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P2M-9",
+      "name": "PX P2M Timing Belt Width 9mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 9,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P2M-9-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0329",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P2M-15",
+      "name": "PX P2M Timing Belt Width 15mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 15,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P2M-15-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0330",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P2M-25",
+      "name": "PX P2M Timing Belt Width 25mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 25,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P2M-25-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0331",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P3M-6",
+      "name": "PX P3M Timing Belt Width 6mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 6,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P3M-6-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0332",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P3M-9",
+      "name": "PX P3M Timing Belt Width 9mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 9,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P3M-9-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0333",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P3M-15",
+      "name": "PX P3M Timing Belt Width 15mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 15,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P3M-15-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0334",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P3M-25",
+      "name": "PX P3M Timing Belt Width 25mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 25,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P3M-25-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0335",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P5M-9",
+      "name": "PX P5M Timing Belt Width 9mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 9,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P5M-9-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0336",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P5M-15",
+      "name": "PX P5M Timing Belt Width 15mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 15,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P5M-15-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0337",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P5M-25",
+      "name": "PX P5M Timing Belt Width 25mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 25,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P5M-25-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0338",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P5M-50",
+      "name": "PX P5M Timing Belt Width 50mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 50,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P5M-50-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0339",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P8M-20",
+      "name": "PX P8M Timing Belt Width 20mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 20,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P8M-20-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0340",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P8M-30",
+      "name": "PX P8M Timing Belt Width 30mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 30,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P8M-30-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0341",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P8M-50",
+      "name": "PX P8M Timing Belt Width 50mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 50,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P8M-50-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0342",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P8M-85",
+      "name": "PX P8M Timing Belt Width 85mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 85,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P8M-85-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0343",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P14M-40",
+      "name": "PX P14M Timing Belt Width 40mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 40,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P14M-40-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0344",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P14M-55",
+      "name": "PX P14M Timing Belt Width 55mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 55,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P14M-55-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0345",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P14M-85",
+      "name": "PX P14M Timing Belt Width 85mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 85,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P14M-85-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0346",
+      "category": "Timing Belt",
+      "series": "PX Standard",
+      "model": "P14M-115",
+      "name": "PX P14M Timing Belt Width 115mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 115,
+        "tooth_profile": "Curvilinear",
+        "material": "Chloroprene Rubber",
+        "cord": "Glass Fiber",
+        "temperature_range": "-30°C to 100°C",
+        "max_speed_mps": 50
+      },
+      "features": [
+        "High Precision",
+        "Low Noise",
+        "Maintenance Free",
+        "No Lubrication"
+      ],
+      "applications": [
+        "Precision Machinery",
+        "Robotics",
+        "CNC",
+        "Automotive"
+      ],
+      "tsubaki_code": "P14M-115-PX",
+      "compatible_pulleys": "PX Series"
+    },
+    {
+      "id": "TSK_0347",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP2M-6",
+      "name": "Ultra PX P2M High Performance Belt Width 6mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 6,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP2M-6-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0348",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP2M-9",
+      "name": "Ultra PX P2M High Performance Belt Width 9mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 9,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP2M-9-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0349",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP2M-15",
+      "name": "Ultra PX P2M High Performance Belt Width 15mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 15,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP2M-15-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0350",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP2M-25",
+      "name": "Ultra PX P2M High Performance Belt Width 25mm",
+      "specifications": {
+        "pitch_mm": 2.0,
+        "width_mm": 25,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP2M-25-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0351",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP3M-6",
+      "name": "Ultra PX P3M High Performance Belt Width 6mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 6,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP3M-6-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0352",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP3M-9",
+      "name": "Ultra PX P3M High Performance Belt Width 9mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 9,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP3M-9-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0353",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP3M-15",
+      "name": "Ultra PX P3M High Performance Belt Width 15mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 15,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP3M-15-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0354",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP3M-25",
+      "name": "Ultra PX P3M High Performance Belt Width 25mm",
+      "specifications": {
+        "pitch_mm": 3.0,
+        "width_mm": 25,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP3M-25-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0355",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP5M-9",
+      "name": "Ultra PX P5M High Performance Belt Width 9mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 9,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP5M-9-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0356",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP5M-15",
+      "name": "Ultra PX P5M High Performance Belt Width 15mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 15,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP5M-15-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0357",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP5M-25",
+      "name": "Ultra PX P5M High Performance Belt Width 25mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 25,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP5M-25-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0358",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP5M-50",
+      "name": "Ultra PX P5M High Performance Belt Width 50mm",
+      "specifications": {
+        "pitch_mm": 5.0,
+        "width_mm": 50,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP5M-50-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0359",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP8M-20",
+      "name": "Ultra PX P8M High Performance Belt Width 20mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 20,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP8M-20-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0360",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP8M-30",
+      "name": "Ultra PX P8M High Performance Belt Width 30mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 30,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP8M-30-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0361",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP8M-50",
+      "name": "Ultra PX P8M High Performance Belt Width 50mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 50,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP8M-50-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0362",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP8M-85",
+      "name": "Ultra PX P8M High Performance Belt Width 85mm",
+      "specifications": {
+        "pitch_mm": 8.0,
+        "width_mm": 85,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP8M-85-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0363",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP14M-40",
+      "name": "Ultra PX P14M High Performance Belt Width 40mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 40,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP14M-40-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0364",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP14M-55",
+      "name": "Ultra PX P14M High Performance Belt Width 55mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 55,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP14M-55-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0365",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP14M-85",
+      "name": "Ultra PX P14M High Performance Belt Width 85mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 85,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP14M-85-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    },
+    {
+      "id": "TSK_0366",
+      "category": "Timing Belt",
+      "series": "Ultra PX",
+      "model": "UP14M-115",
+      "name": "Ultra PX P14M High Performance Belt Width 115mm",
+      "specifications": {
+        "pitch_mm": 14.0,
+        "width_mm": 115,
+        "tooth_profile": "Ultra Curvilinear",
+        "material": "HNBR (Hydrogenated NBR)",
+        "cord": "Carbon Fiber",
+        "temperature_range": "-40°C to 150°C",
+        "max_speed_mps": 80
+      },
+      "features": [
+        "Ultra High Performance",
+        "High Temperature",
+        "Carbon Fiber Cord"
+      ],
+      "applications": [
+        "High Speed Machinery",
+        "High Temperature",
+        "Severe Duty"
+      ],
+      "tsubaki_code": "UP14M-115-UPX",
+      "compatible_pulleys": "Ultra PX Series"
+    }
+  ]
+}

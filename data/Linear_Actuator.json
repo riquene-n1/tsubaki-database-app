@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "category": "Linear Actuator",
+    "product_count": 8,
+    "last_updated": "2024-12-08",
+    "version": "2.0"
+  },
+  "products": [
+    {
+      "id": "TSK_0383",
+      "category": "Linear Actuator",
+      "series": "ZCA Series",
+      "model": "ZCA-025",
+      "name": "ZCA-025 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 2.45,
+        "stroke_mm": 25,
+        "speed_mm_per_min": 50,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "ZCA-025",
+      "mounting": "Multiple Options"
+    },
+    {
+      "id": "TSK_0384",
+      "category": "Linear Actuator",
+      "series": "ZCA Series",
+      "model": "ZCA-050",
+      "name": "ZCA-050 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 4.9,
+        "stroke_mm": 50,
+        "speed_mm_per_min": 100,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "ZCA-050",
+      "mounting": "Multiple Options"
+    },
+    {
+      "id": "TSK_0385",
+      "category": "Linear Actuator",
+      "series": "ZCA Series",
+      "model": "ZCA-100",
+      "name": "ZCA-100 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 9.8,
+        "stroke_mm": 100,
+        "speed_mm_per_min": 150,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "ZCA-100",
+      "mounting": "Multiple Options"
+    },
+    {
+      "id": "TSK_0386",
+      "category": "Linear Actuator",
+      "series": "ZCA Series",
+      "model": "ZCA-200",
+      "name": "ZCA-200 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 19.6,
+        "stroke_mm": 200,
+        "speed_mm_per_min": 200,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "ZCA-200",
+      "mounting": "Multiple Options"
+    },
+    {
+      "id": "TSK_0387",
+      "category": "Linear Actuator",
+      "series": "T Series Power Cylinder",
+      "model": "T-500",
+      "name": "T-500 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 5.0,
+        "stroke_mm": 500,
+        "speed_mm_per_min": 100,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "T-500",
+      "mounting": "Multiple Options"
+    },
+    {
+      "id": "TSK_0388",
+      "category": "Linear Actuator",
+      "series": "T Series Power Cylinder",
+      "model": "T-1000",
+      "name": "T-1000 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 10.0,
+        "stroke_mm": 1000,
+        "speed_mm_per_min": 150,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "T-1000",
+      "mounting": "Multiple Options"
+    },
+    {
+      "id": "TSK_0389",
+      "category": "Linear Actuator",
+      "series": "T Series Power Cylinder",
+      "model": "T-1500",
+      "name": "T-1500 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 15.0,
+        "stroke_mm": 1500,
+        "speed_mm_per_min": 200,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "T-1500",
+      "mounting": "Multiple Options"
+    },
+    {
+      "id": "TSK_0390",
+      "category": "Linear Actuator",
+      "series": "T Series Power Cylinder",
+      "model": "T-2000",
+      "name": "T-2000 Linear Actuator",
+      "specifications": {
+        "thrust_kn": 20.0,
+        "stroke_mm": 2000,
+        "speed_mm_per_min": 250,
+        "positioning_accuracy": "±0.5mm",
+        "material": "Aluminum/Steel",
+        "temperature_range": "-10°C to 60°C"
+      },
+      "features": [
+        "High Precision",
+        "Compact Design",
+        "Safety Features"
+      ],
+      "applications": [
+        "Automation",
+        "Material Handling",
+        "Positioning Systems"
+      ],
+      "tsubaki_code": "T-2000",
+      "mounting": "Multiple Options"
+    }
+  ]
+}

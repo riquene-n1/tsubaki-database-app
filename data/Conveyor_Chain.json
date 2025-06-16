@@ -1,0 +1,570 @@
+{
+  "metadata": {
+    "category": "Conveyor Chain",
+    "product_count": 20,
+    "last_updated": "2024-12-08",
+    "version": "2.0"
+  },
+  "products": [
+    {
+      "id": "TSK_0307",
+      "category": "Conveyor Chain",
+      "series": "DT Basic",
+      "model": "DT03-R",
+      "name": "DT DT03 General Purpose Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 76.2,
+        "width_mm": 25.4,
+        "roller_type": "R",
+        "max_allowable_load_kn": 8.9,
+        "material": "Carbon Steel",
+        "temperature_range": "-10°C to 80°C",
+        "surface_treatment": "Black Oxide"
+      },
+      "features": [
+        "Cost Effective",
+        "General Purpose",
+        "Wide Application"
+      ],
+      "applications": [
+        "Material Handling",
+        "General Conveyors",
+        "Light Industry"
+      ],
+      "tsubaki_code": "DT03-R-DT",
+      "roller_description": "Standard Roller"
+    },
+    {
+      "id": "TSK_0308",
+      "category": "Conveyor Chain",
+      "series": "DT Basic",
+      "model": "DT06-R",
+      "name": "DT DT06 General Purpose Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 152.4,
+        "width_mm": 50.8,
+        "roller_type": "R",
+        "max_allowable_load_kn": 35.6,
+        "material": "Carbon Steel",
+        "temperature_range": "-10°C to 80°C",
+        "surface_treatment": "Black Oxide"
+      },
+      "features": [
+        "Cost Effective",
+        "General Purpose",
+        "Wide Application"
+      ],
+      "applications": [
+        "Material Handling",
+        "General Conveyors",
+        "Light Industry"
+      ],
+      "tsubaki_code": "DT06-R-DT",
+      "roller_description": "Standard Roller"
+    },
+    {
+      "id": "TSK_0309",
+      "category": "Conveyor Chain",
+      "series": "DT Basic",
+      "model": "DT10-R",
+      "name": "DT DT10 General Purpose Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 254.0,
+        "width_mm": 76.2,
+        "roller_type": "R",
+        "max_allowable_load_kn": 89.0,
+        "material": "Carbon Steel",
+        "temperature_range": "-10°C to 80°C",
+        "surface_treatment": "Black Oxide"
+      },
+      "features": [
+        "Cost Effective",
+        "General Purpose",
+        "Wide Application"
+      ],
+      "applications": [
+        "Material Handling",
+        "General Conveyors",
+        "Light Industry"
+      ],
+      "tsubaki_code": "DT10-R-DT",
+      "roller_description": "Standard Roller"
+    },
+    {
+      "id": "TSK_0310",
+      "category": "Conveyor Chain",
+      "series": "DT Basic",
+      "model": "DT12-R",
+      "name": "DT DT12 General Purpose Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 304.8,
+        "width_mm": 101.6,
+        "roller_type": "R",
+        "max_allowable_load_kn": 133.5,
+        "material": "Carbon Steel",
+        "temperature_range": "-10°C to 80°C",
+        "surface_treatment": "Black Oxide"
+      },
+      "features": [
+        "Cost Effective",
+        "General Purpose",
+        "Wide Application"
+      ],
+      "applications": [
+        "Material Handling",
+        "General Conveyors",
+        "Light Industry"
+      ],
+      "tsubaki_code": "DT12-R-DT",
+      "roller_description": "Standard Roller"
+    },
+    {
+      "id": "TSK_0311",
+      "category": "Conveyor Chain",
+      "series": "DT Basic",
+      "model": "DT15-R",
+      "name": "DT DT15 General Purpose Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 381.0,
+        "width_mm": 127.0,
+        "roller_type": "R",
+        "max_allowable_load_kn": 200.0,
+        "material": "Carbon Steel",
+        "temperature_range": "-10°C to 80°C",
+        "surface_treatment": "Black Oxide"
+      },
+      "features": [
+        "Cost Effective",
+        "General Purpose",
+        "Wide Application"
+      ],
+      "applications": [
+        "Material Handling",
+        "General Conveyors",
+        "Light Industry"
+      ],
+      "tsubaki_code": "DT15-R-DT",
+      "roller_description": "Standard Roller"
+    },
+    {
+      "id": "TSK_0312",
+      "category": "Conveyor Chain",
+      "series": "AT Heavy Duty",
+      "model": "AT03-R",
+      "name": "AT AT03 Heavy Duty Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 76.2,
+        "width_mm": 25.4,
+        "roller_type": "R",
+        "max_allowable_load_kn": 13.4,
+        "material": "High Carbon Steel",
+        "temperature_range": "-10°C to 120°C",
+        "surface_treatment": "Heat Treated"
+      },
+      "features": [
+        "Heavy Duty",
+        "High Load Capacity",
+        "Wear Resistant"
+      ],
+      "applications": [
+        "Heavy Material Handling",
+        "Mining",
+        "Steel Mills"
+      ],
+      "tsubaki_code": "AT03-R-AT",
+      "roller_description": "Heavy Duty Roller"
+    },
+    {
+      "id": "TSK_0313",
+      "category": "Conveyor Chain",
+      "series": "AT Heavy Duty",
+      "model": "AT06-R",
+      "name": "AT AT06 Heavy Duty Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 152.4,
+        "width_mm": 50.8,
+        "roller_type": "R",
+        "max_allowable_load_kn": 53.4,
+        "material": "High Carbon Steel",
+        "temperature_range": "-10°C to 120°C",
+        "surface_treatment": "Heat Treated"
+      },
+      "features": [
+        "Heavy Duty",
+        "High Load Capacity",
+        "Wear Resistant"
+      ],
+      "applications": [
+        "Heavy Material Handling",
+        "Mining",
+        "Steel Mills"
+      ],
+      "tsubaki_code": "AT06-R-AT",
+      "roller_description": "Heavy Duty Roller"
+    },
+    {
+      "id": "TSK_0314",
+      "category": "Conveyor Chain",
+      "series": "AT Heavy Duty",
+      "model": "AT10-R",
+      "name": "AT AT10 Heavy Duty Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 254.0,
+        "width_mm": 76.2,
+        "roller_type": "R",
+        "max_allowable_load_kn": 133.5,
+        "material": "High Carbon Steel",
+        "temperature_range": "-10°C to 120°C",
+        "surface_treatment": "Heat Treated"
+      },
+      "features": [
+        "Heavy Duty",
+        "High Load Capacity",
+        "Wear Resistant"
+      ],
+      "applications": [
+        "Heavy Material Handling",
+        "Mining",
+        "Steel Mills"
+      ],
+      "tsubaki_code": "AT10-R-AT",
+      "roller_description": "Heavy Duty Roller"
+    },
+    {
+      "id": "TSK_0315",
+      "category": "Conveyor Chain",
+      "series": "AT Heavy Duty",
+      "model": "AT12-R",
+      "name": "AT AT12 Heavy Duty Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 304.8,
+        "width_mm": 101.6,
+        "roller_type": "R",
+        "max_allowable_load_kn": 200.1,
+        "material": "High Carbon Steel",
+        "temperature_range": "-10°C to 120°C",
+        "surface_treatment": "Heat Treated"
+      },
+      "features": [
+        "Heavy Duty",
+        "High Load Capacity",
+        "Wear Resistant"
+      ],
+      "applications": [
+        "Heavy Material Handling",
+        "Mining",
+        "Steel Mills"
+      ],
+      "tsubaki_code": "AT12-R-AT",
+      "roller_description": "Heavy Duty Roller"
+    },
+    {
+      "id": "TSK_0316",
+      "category": "Conveyor Chain",
+      "series": "AT Heavy Duty",
+      "model": "AT15-R",
+      "name": "AT AT15 Heavy Duty Conveyor Chain",
+      "specifications": {
+        "pitch_mm": 381.0,
+        "width_mm": 127.0,
+        "roller_type": "R",
+        "max_allowable_load_kn": 300.0,
+        "material": "High Carbon Steel",
+        "temperature_range": "-10°C to 120°C",
+        "surface_treatment": "Heat Treated"
+      },
+      "features": [
+        "Heavy Duty",
+        "High Load Capacity",
+        "Wear Resistant"
+      ],
+      "applications": [
+        "Heavy Material Handling",
+        "Mining",
+        "Steel Mills"
+      ],
+      "tsubaki_code": "AT15-R-AT",
+      "roller_description": "Heavy Duty Roller"
+    },
+    {
+      "id": "TSK_0317",
+      "category": "Conveyor Chain",
+      "series": "DTA Advanced",
+      "model": "DT03-R-DTA",
+      "name": "DTA DT03 Advanced General Purpose Chain",
+      "specifications": {
+        "pitch_mm": 76.2,
+        "width_mm": 25.4,
+        "roller_type": "R",
+        "max_allowable_load_kn": 11.57,
+        "material": "Advanced Carbon Steel",
+        "temperature_range": "-10°C to 100°C",
+        "surface_treatment": "Advanced Coating"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear Resistance",
+        "Advanced Materials"
+      ],
+      "applications": [
+        "High Performance Conveying",
+        "Automotive",
+        "Electronics"
+      ],
+      "tsubaki_code": "DT03-R-DTA",
+      "roller_description": "Advanced Roller"
+    },
+    {
+      "id": "TSK_0318",
+      "category": "Conveyor Chain",
+      "series": "DTA Advanced",
+      "model": "DT06-R-DTA",
+      "name": "DTA DT06 Advanced General Purpose Chain",
+      "specifications": {
+        "pitch_mm": 152.4,
+        "width_mm": 50.8,
+        "roller_type": "R",
+        "max_allowable_load_kn": 46.28,
+        "material": "Advanced Carbon Steel",
+        "temperature_range": "-10°C to 100°C",
+        "surface_treatment": "Advanced Coating"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear Resistance",
+        "Advanced Materials"
+      ],
+      "applications": [
+        "High Performance Conveying",
+        "Automotive",
+        "Electronics"
+      ],
+      "tsubaki_code": "DT06-R-DTA",
+      "roller_description": "Advanced Roller"
+    },
+    {
+      "id": "TSK_0319",
+      "category": "Conveyor Chain",
+      "series": "DTA Advanced",
+      "model": "DT10-R-DTA",
+      "name": "DTA DT10 Advanced General Purpose Chain",
+      "specifications": {
+        "pitch_mm": 254.0,
+        "width_mm": 76.2,
+        "roller_type": "R",
+        "max_allowable_load_kn": 115.7,
+        "material": "Advanced Carbon Steel",
+        "temperature_range": "-10°C to 100°C",
+        "surface_treatment": "Advanced Coating"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear Resistance",
+        "Advanced Materials"
+      ],
+      "applications": [
+        "High Performance Conveying",
+        "Automotive",
+        "Electronics"
+      ],
+      "tsubaki_code": "DT10-R-DTA",
+      "roller_description": "Advanced Roller"
+    },
+    {
+      "id": "TSK_0320",
+      "category": "Conveyor Chain",
+      "series": "DTA Advanced",
+      "model": "DT12-R-DTA",
+      "name": "DTA DT12 Advanced General Purpose Chain",
+      "specifications": {
+        "pitch_mm": 304.8,
+        "width_mm": 101.6,
+        "roller_type": "R",
+        "max_allowable_load_kn": 173.55,
+        "material": "Advanced Carbon Steel",
+        "temperature_range": "-10°C to 100°C",
+        "surface_treatment": "Advanced Coating"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear Resistance",
+        "Advanced Materials"
+      ],
+      "applications": [
+        "High Performance Conveying",
+        "Automotive",
+        "Electronics"
+      ],
+      "tsubaki_code": "DT12-R-DTA",
+      "roller_description": "Advanced Roller"
+    },
+    {
+      "id": "TSK_0321",
+      "category": "Conveyor Chain",
+      "series": "DTA Advanced",
+      "model": "DT15-R-DTA",
+      "name": "DTA DT15 Advanced General Purpose Chain",
+      "specifications": {
+        "pitch_mm": 381.0,
+        "width_mm": 127.0,
+        "roller_type": "R",
+        "max_allowable_load_kn": 260.0,
+        "material": "Advanced Carbon Steel",
+        "temperature_range": "-10°C to 100°C",
+        "surface_treatment": "Advanced Coating"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear Resistance",
+        "Advanced Materials"
+      ],
+      "applications": [
+        "High Performance Conveying",
+        "Automotive",
+        "Electronics"
+      ],
+      "tsubaki_code": "DT15-R-DTA",
+      "roller_description": "Advanced Roller"
+    },
+    {
+      "id": "TSK_0322",
+      "category": "Conveyor Chain",
+      "series": "ATA Advanced",
+      "model": "AT03-R-ATA",
+      "name": "ATA AT03 Advanced Heavy Duty Chain",
+      "specifications": {
+        "pitch_mm": 76.2,
+        "width_mm": 25.4,
+        "roller_type": "R",
+        "max_allowable_load_kn": 17.42,
+        "material": "Advanced High Carbon Steel",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Advanced Heat Treatment"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear",
+        "Superior Strength"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Advanced Mining",
+        "High Performance"
+      ],
+      "tsubaki_code": "AT03-R-ATA",
+      "roller_description": "Advanced Heavy Roller"
+    },
+    {
+      "id": "TSK_0323",
+      "category": "Conveyor Chain",
+      "series": "ATA Advanced",
+      "model": "AT06-R-ATA",
+      "name": "ATA AT06 Advanced Heavy Duty Chain",
+      "specifications": {
+        "pitch_mm": 152.4,
+        "width_mm": 50.8,
+        "roller_type": "R",
+        "max_allowable_load_kn": 69.42,
+        "material": "Advanced High Carbon Steel",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Advanced Heat Treatment"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear",
+        "Superior Strength"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Advanced Mining",
+        "High Performance"
+      ],
+      "tsubaki_code": "AT06-R-ATA",
+      "roller_description": "Advanced Heavy Roller"
+    },
+    {
+      "id": "TSK_0324",
+      "category": "Conveyor Chain",
+      "series": "ATA Advanced",
+      "model": "AT10-R-ATA",
+      "name": "ATA AT10 Advanced Heavy Duty Chain",
+      "specifications": {
+        "pitch_mm": 254.0,
+        "width_mm": 76.2,
+        "roller_type": "R",
+        "max_allowable_load_kn": 173.55,
+        "material": "Advanced High Carbon Steel",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Advanced Heat Treatment"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear",
+        "Superior Strength"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Advanced Mining",
+        "High Performance"
+      ],
+      "tsubaki_code": "AT10-R-ATA",
+      "roller_description": "Advanced Heavy Roller"
+    },
+    {
+      "id": "TSK_0325",
+      "category": "Conveyor Chain",
+      "series": "ATA Advanced",
+      "model": "AT12-R-ATA",
+      "name": "ATA AT12 Advanced Heavy Duty Chain",
+      "specifications": {
+        "pitch_mm": 304.8,
+        "width_mm": 101.6,
+        "roller_type": "R",
+        "max_allowable_load_kn": 260.13,
+        "material": "Advanced High Carbon Steel",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Advanced Heat Treatment"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear",
+        "Superior Strength"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Advanced Mining",
+        "High Performance"
+      ],
+      "tsubaki_code": "AT12-R-ATA",
+      "roller_description": "Advanced Heavy Roller"
+    },
+    {
+      "id": "TSK_0326",
+      "category": "Conveyor Chain",
+      "series": "ATA Advanced",
+      "model": "AT15-R-ATA",
+      "name": "ATA AT15 Advanced Heavy Duty Chain",
+      "specifications": {
+        "pitch_mm": 381.0,
+        "width_mm": 127.0,
+        "roller_type": "R",
+        "max_allowable_load_kn": 390.0,
+        "material": "Advanced High Carbon Steel",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Advanced Heat Treatment"
+      },
+      "features": [
+        "30% Higher Load",
+        "1.3x Better Wear",
+        "Superior Strength"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Advanced Mining",
+        "High Performance"
+      ],
+      "tsubaki_code": "AT15-R-ATA",
+      "roller_description": "Advanced Heavy Roller"
+    }
+  ]
+}

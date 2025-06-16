@@ -1,0 +1,3074 @@
+{
+  "metadata": {
+    "category": "Drive Chain",
+    "product_count": 98,
+    "last_updated": "2024-12-08",
+    "version": "2.0"
+  },
+  "products": [
+    {
+      "id": "TSK_0001",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS25-1",
+      "name": "ANSI RS25 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 6.35,
+        "pitch_inch": "1/4",
+        "strands": 1,
+        "tensile_strength_kn": 8.9,
+        "allowable_load_kn": 2.2,
+        "weight_kg_per_m": 0.28,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS25-1-G8",
+      "ansi_standard": "25",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0002",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS25-2",
+      "name": "ANSI RS25 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 6.35,
+        "pitch_inch": "1/4",
+        "strands": 2,
+        "tensile_strength_kn": 15.13,
+        "allowable_load_kn": 3.74,
+        "weight_kg_per_m": 0.56,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS25-2-G8",
+      "ansi_standard": "25",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0003",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS35-1",
+      "name": "ANSI RS35 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 9.525,
+        "pitch_inch": "3/8",
+        "strands": 1,
+        "tensile_strength_kn": 17.6,
+        "allowable_load_kn": 4.8,
+        "weight_kg_per_m": 0.65,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS35-1-G8",
+      "ansi_standard": "35",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0004",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS35-2",
+      "name": "ANSI RS35 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 9.525,
+        "pitch_inch": "3/8",
+        "strands": 2,
+        "tensile_strength_kn": 29.92,
+        "allowable_load_kn": 8.16,
+        "weight_kg_per_m": 1.3,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS35-2-G8",
+      "ansi_standard": "35",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0005",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS40-1",
+      "name": "ANSI RS40 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "pitch_inch": "1/2",
+        "strands": 1,
+        "tensile_strength_kn": 31.1,
+        "allowable_load_kn": 8.1,
+        "weight_kg_per_m": 1.28,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS40-1-G8",
+      "ansi_standard": "40",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0006",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS40-2",
+      "name": "ANSI RS40 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "pitch_inch": "1/2",
+        "strands": 2,
+        "tensile_strength_kn": 52.870000000000005,
+        "allowable_load_kn": 13.77,
+        "weight_kg_per_m": 2.56,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS40-2-G8",
+      "ansi_standard": "40",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0007",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS50-1",
+      "name": "ANSI RS50 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "pitch_inch": "5/8",
+        "strands": 1,
+        "tensile_strength_kn": 48.9,
+        "allowable_load_kn": 14.3,
+        "weight_kg_per_m": 2.08,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS50-1-G8",
+      "ansi_standard": "50",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0008",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS50-2",
+      "name": "ANSI RS50 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "pitch_inch": "5/8",
+        "strands": 2,
+        "tensile_strength_kn": 83.13,
+        "allowable_load_kn": 24.310000000000002,
+        "weight_kg_per_m": 4.16,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS50-2-G8",
+      "ansi_standard": "50",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0009",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS60-1",
+      "name": "ANSI RS60 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "pitch_inch": "3/4",
+        "strands": 1,
+        "tensile_strength_kn": 70.1,
+        "allowable_load_kn": 19.8,
+        "weight_kg_per_m": 3.05,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS60-1-G8",
+      "ansi_standard": "60",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0010",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS60-2",
+      "name": "ANSI RS60 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "pitch_inch": "3/4",
+        "strands": 2,
+        "tensile_strength_kn": 119.16999999999999,
+        "allowable_load_kn": 33.660000000000004,
+        "weight_kg_per_m": 6.1,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS60-2-G8",
+      "ansi_standard": "60",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0011",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS80-1",
+      "name": "ANSI RS80 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "pitch_inch": "1",
+        "strands": 1,
+        "tensile_strength_kn": 125.0,
+        "allowable_load_kn": 33.0,
+        "weight_kg_per_m": 5.3,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS80-1-G8",
+      "ansi_standard": "80",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0012",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS80-2",
+      "name": "ANSI RS80 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "pitch_inch": "1",
+        "strands": 2,
+        "tensile_strength_kn": 212.5,
+        "allowable_load_kn": 56.1,
+        "weight_kg_per_m": 10.6,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS80-2-G8",
+      "ansi_standard": "80",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0013",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS100-1",
+      "name": "ANSI RS100 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "pitch_inch": "1-1/4",
+        "strands": 1,
+        "tensile_strength_kn": 195.3,
+        "allowable_load_kn": 50.7,
+        "weight_kg_per_m": 8.81,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS100-1-G8",
+      "ansi_standard": "100",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0014",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS100-2",
+      "name": "ANSI RS100 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "pitch_inch": "1-1/4",
+        "strands": 2,
+        "tensile_strength_kn": 332.01,
+        "allowable_load_kn": 86.19,
+        "weight_kg_per_m": 17.62,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS100-2-G8",
+      "ansi_standard": "100",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0015",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS120-1",
+      "name": "ANSI RS120 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "pitch_inch": "1-1/2",
+        "strands": 1,
+        "tensile_strength_kn": 281.3,
+        "allowable_load_kn": 68.3,
+        "weight_kg_per_m": 12.57,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS120-1-G8",
+      "ansi_standard": "120",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0016",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS120-2",
+      "name": "ANSI RS120 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "pitch_inch": "1-1/2",
+        "strands": 2,
+        "tensile_strength_kn": 478.21,
+        "allowable_load_kn": 116.10999999999999,
+        "weight_kg_per_m": 25.14,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS120-2-G8",
+      "ansi_standard": "120",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0017",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS140-1",
+      "name": "ANSI RS140 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "pitch_inch": "1-3/4",
+        "strands": 1,
+        "tensile_strength_kn": 382.8,
+        "allowable_load_kn": 90.4,
+        "weight_kg_per_m": 17.0,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS140-1-G8",
+      "ansi_standard": "140",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0018",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS140-2",
+      "name": "ANSI RS140 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "pitch_inch": "1-3/4",
+        "strands": 2,
+        "tensile_strength_kn": 650.76,
+        "allowable_load_kn": 153.68,
+        "weight_kg_per_m": 34.0,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS140-2-G8",
+      "ansi_standard": "140",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0019",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS160-1",
+      "name": "ANSI RS160 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "pitch_inch": "2",
+        "strands": 1,
+        "tensile_strength_kn": 500.0,
+        "allowable_load_kn": 119.0,
+        "weight_kg_per_m": 23.55,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS160-1-G8",
+      "ansi_standard": "160",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0020",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS160-2",
+      "name": "ANSI RS160 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "pitch_inch": "2",
+        "strands": 2,
+        "tensile_strength_kn": 850.0,
+        "allowable_load_kn": 202.29999999999998,
+        "weight_kg_per_m": 47.1,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS160-2-G8",
+      "ansi_standard": "160",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0021",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS180-1",
+      "name": "ANSI RS180 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 57.15,
+        "pitch_inch": "2-1/4",
+        "strands": 1,
+        "tensile_strength_kn": 632.8,
+        "allowable_load_kn": 136.7,
+        "weight_kg_per_m": 31.0,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS180-1-G8",
+      "ansi_standard": "180",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0022",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS180-2",
+      "name": "ANSI RS180 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 57.15,
+        "pitch_inch": "2-1/4",
+        "strands": 2,
+        "tensile_strength_kn": 1075.76,
+        "allowable_load_kn": 232.39,
+        "weight_kg_per_m": 62.0,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS180-2-G8",
+      "ansi_standard": "180",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0023",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS200-1",
+      "name": "ANSI RS200 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 63.5,
+        "pitch_inch": "2-1/2",
+        "strands": 1,
+        "tensile_strength_kn": 781.3,
+        "allowable_load_kn": 160.9,
+        "weight_kg_per_m": 40.14,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS200-1-G8",
+      "ansi_standard": "200",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0024",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS200-2",
+      "name": "ANSI RS200 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 63.5,
+        "pitch_inch": "2-1/2",
+        "strands": 2,
+        "tensile_strength_kn": 1328.2099999999998,
+        "allowable_load_kn": 273.53000000000003,
+        "weight_kg_per_m": 80.28,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS200-2-G8",
+      "ansi_standard": "200",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0025",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS240-1",
+      "name": "ANSI RS240 Single Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 76.2,
+        "pitch_inch": "3",
+        "strands": 1,
+        "tensile_strength_kn": 1125.0,
+        "allowable_load_kn": 222.7,
+        "weight_kg_per_m": 55.07,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Patented Lube Groove",
+        "33% Higher HP Rating"
+      ],
+      "applications": [
+        "General Industrial",
+        "Manufacturing",
+        "Conveyors"
+      ],
+      "tsubaki_code": "RS240-1-G8",
+      "ansi_standard": "240",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0026",
+      "category": "Drive Chain",
+      "series": "RS Standard",
+      "model": "RS240-2",
+      "name": "ANSI RS240 Double Strand Roller Chain",
+      "specifications": {
+        "pitch_mm": 76.2,
+        "pitch_inch": "3",
+        "strands": 2,
+        "tensile_strength_kn": 1912.5,
+        "allowable_load_kn": 378.59,
+        "weight_kg_per_m": 110.14,
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "surface_treatment": "Standard"
+      },
+      "features": [
+        "G8 Technology",
+        "Double Strength",
+        "Patented Lube Groove"
+      ],
+      "applications": [
+        "Heavy Duty",
+        "High Power",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RS240-2-G8",
+      "ansi_standard": "240",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0027",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM25-1",
+      "name": "LAMBDA LM25 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 6.35,
+        "strands": 1,
+        "tensile_strength_kn": 8.9,
+        "allowable_load_kn": 2.2,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM25-1-LAMBDA",
+      "base_chain": "RS25",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0028",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM25-2",
+      "name": "LAMBDA LM25 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 6.35,
+        "strands": 2,
+        "tensile_strength_kn": 15.13,
+        "allowable_load_kn": 3.74,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM25-2-LAMBDA",
+      "base_chain": "RS25",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0029",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM35-1",
+      "name": "LAMBDA LM35 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 9.525,
+        "strands": 1,
+        "tensile_strength_kn": 17.6,
+        "allowable_load_kn": 4.8,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM35-1-LAMBDA",
+      "base_chain": "RS35",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0030",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM35-2",
+      "name": "LAMBDA LM35 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 9.525,
+        "strands": 2,
+        "tensile_strength_kn": 29.92,
+        "allowable_load_kn": 8.16,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM35-2-LAMBDA",
+      "base_chain": "RS35",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0031",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM40-1",
+      "name": "LAMBDA LM40 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 1,
+        "tensile_strength_kn": 31.1,
+        "allowable_load_kn": 8.1,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM40-1-LAMBDA",
+      "base_chain": "RS40",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0032",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM40-2",
+      "name": "LAMBDA LM40 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 2,
+        "tensile_strength_kn": 52.870000000000005,
+        "allowable_load_kn": 13.77,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM40-2-LAMBDA",
+      "base_chain": "RS40",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0033",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM50-1",
+      "name": "LAMBDA LM50 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 1,
+        "tensile_strength_kn": 48.9,
+        "allowable_load_kn": 14.3,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM50-1-LAMBDA",
+      "base_chain": "RS50",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0034",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM50-2",
+      "name": "LAMBDA LM50 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 2,
+        "tensile_strength_kn": 83.13,
+        "allowable_load_kn": 24.310000000000002,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM50-2-LAMBDA",
+      "base_chain": "RS50",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0035",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM60-1",
+      "name": "LAMBDA LM60 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 1,
+        "tensile_strength_kn": 70.1,
+        "allowable_load_kn": 19.8,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM60-1-LAMBDA",
+      "base_chain": "RS60",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0036",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM60-2",
+      "name": "LAMBDA LM60 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 2,
+        "tensile_strength_kn": 119.16999999999999,
+        "allowable_load_kn": 33.660000000000004,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM60-2-LAMBDA",
+      "base_chain": "RS60",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0037",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM80-1",
+      "name": "LAMBDA LM80 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 1,
+        "tensile_strength_kn": 125.0,
+        "allowable_load_kn": 33.0,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM80-1-LAMBDA",
+      "base_chain": "RS80",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0038",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM80-2",
+      "name": "LAMBDA LM80 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 2,
+        "tensile_strength_kn": 212.5,
+        "allowable_load_kn": 56.1,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM80-2-LAMBDA",
+      "base_chain": "RS80",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0039",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM100-1",
+      "name": "LAMBDA LM100 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 1,
+        "tensile_strength_kn": 195.3,
+        "allowable_load_kn": 50.7,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM100-1-LAMBDA",
+      "base_chain": "RS100",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0040",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM100-2",
+      "name": "LAMBDA LM100 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 2,
+        "tensile_strength_kn": 332.01,
+        "allowable_load_kn": 86.19,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM100-2-LAMBDA",
+      "base_chain": "RS100",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0041",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM120-1",
+      "name": "LAMBDA LM120 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "strands": 1,
+        "tensile_strength_kn": 281.3,
+        "allowable_load_kn": 68.3,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM120-1-LAMBDA",
+      "base_chain": "RS120",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0042",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM120-2",
+      "name": "LAMBDA LM120 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "strands": 2,
+        "tensile_strength_kn": 478.21,
+        "allowable_load_kn": 116.10999999999999,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM120-2-LAMBDA",
+      "base_chain": "RS120",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0043",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM140-1",
+      "name": "LAMBDA LM140 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "strands": 1,
+        "tensile_strength_kn": 382.8,
+        "allowable_load_kn": 90.4,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM140-1-LAMBDA",
+      "base_chain": "RS140",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0044",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM140-2",
+      "name": "LAMBDA LM140 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "strands": 2,
+        "tensile_strength_kn": 650.76,
+        "allowable_load_kn": 153.68,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM140-2-LAMBDA",
+      "base_chain": "RS140",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0045",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM160-1",
+      "name": "LAMBDA LM160 Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "strands": 1,
+        "tensile_strength_kn": 500.0,
+        "allowable_load_kn": 119.0,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Maintenance Free",
+        "30% Longer Life",
+        "Food Grade"
+      ],
+      "applications": [
+        "Food Processing",
+        "Packaging",
+        "Clean Environments"
+      ],
+      "tsubaki_code": "LM160-1-LAMBDA",
+      "base_chain": "RS160",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0046",
+      "category": "Drive Chain",
+      "series": "LAMBDA",
+      "model": "LM160-2",
+      "name": "LAMBDA LM160 Double Strand Self-Lubricating Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "strands": 2,
+        "tensile_strength_kn": 850.0,
+        "allowable_load_kn": 202.29999999999998,
+        "material": "Carbon Steel with Sintered Oil Bushing",
+        "temperature_range": "-10°C to 150°C",
+        "surface_treatment": "Self-Lubricating",
+        "lubrication": "NSF H1 Food Grade"
+      },
+      "features": [
+        "Self-Lubricating",
+        "Double Strength",
+        "Maintenance Free",
+        "Food Grade"
+      ],
+      "applications": [
+        "Heavy Duty Food",
+        "High Power Clean",
+        "Industrial Packaging"
+      ],
+      "tsubaki_code": "LM160-2-LAMBDA",
+      "base_chain": "RS160",
+      "connecting_link": "Standard"
+    },
+    {
+      "id": "TSK_0047",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP50-1",
+      "name": "NEPTUNE NP50 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 1,
+        "tensile_strength_kn": 48.9,
+        "allowable_load_kn": 14.3,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP50-1-NEPTUNE",
+      "base_chain": "RS50",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0048",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP50-2",
+      "name": "NEPTUNE NP50 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 2,
+        "tensile_strength_kn": 83.13,
+        "allowable_load_kn": 24.310000000000002,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP50-2-NEPTUNE",
+      "base_chain": "RS50",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0049",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP60-1",
+      "name": "NEPTUNE NP60 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 1,
+        "tensile_strength_kn": 70.1,
+        "allowable_load_kn": 19.8,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP60-1-NEPTUNE",
+      "base_chain": "RS60",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0050",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP60-2",
+      "name": "NEPTUNE NP60 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 2,
+        "tensile_strength_kn": 119.16999999999999,
+        "allowable_load_kn": 33.660000000000004,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP60-2-NEPTUNE",
+      "base_chain": "RS60",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0051",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP80-1",
+      "name": "NEPTUNE NP80 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 1,
+        "tensile_strength_kn": 125.0,
+        "allowable_load_kn": 33.0,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP80-1-NEPTUNE",
+      "base_chain": "RS80",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0052",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP80-2",
+      "name": "NEPTUNE NP80 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 2,
+        "tensile_strength_kn": 212.5,
+        "allowable_load_kn": 56.1,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP80-2-NEPTUNE",
+      "base_chain": "RS80",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0053",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP100-1",
+      "name": "NEPTUNE NP100 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 1,
+        "tensile_strength_kn": 195.3,
+        "allowable_load_kn": 50.7,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP100-1-NEPTUNE",
+      "base_chain": "RS100",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0054",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP100-2",
+      "name": "NEPTUNE NP100 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 2,
+        "tensile_strength_kn": 332.01,
+        "allowable_load_kn": 86.19,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP100-2-NEPTUNE",
+      "base_chain": "RS100",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0055",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP120-1",
+      "name": "NEPTUNE NP120 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "strands": 1,
+        "tensile_strength_kn": 281.3,
+        "allowable_load_kn": 68.3,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP120-1-NEPTUNE",
+      "base_chain": "RS120",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0056",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP120-2",
+      "name": "NEPTUNE NP120 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "strands": 2,
+        "tensile_strength_kn": 478.21,
+        "allowable_load_kn": 116.10999999999999,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP120-2-NEPTUNE",
+      "base_chain": "RS120",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0057",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP140-1",
+      "name": "NEPTUNE NP140 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "strands": 1,
+        "tensile_strength_kn": 382.8,
+        "allowable_load_kn": 90.4,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP140-1-NEPTUNE",
+      "base_chain": "RS140",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0058",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP140-2",
+      "name": "NEPTUNE NP140 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "strands": 2,
+        "tensile_strength_kn": 650.76,
+        "allowable_load_kn": 153.68,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP140-2-NEPTUNE",
+      "base_chain": "RS140",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0059",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP160-1",
+      "name": "NEPTUNE NP160 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "strands": 1,
+        "tensile_strength_kn": 500.0,
+        "allowable_load_kn": 119.0,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP160-1-NEPTUNE",
+      "base_chain": "RS160",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0060",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP160-2",
+      "name": "NEPTUNE NP160 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "strands": 2,
+        "tensile_strength_kn": 850.0,
+        "allowable_load_kn": 202.29999999999998,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP160-2-NEPTUNE",
+      "base_chain": "RS160",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0061",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP200-1",
+      "name": "NEPTUNE NP200 Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 63.5,
+        "strands": 1,
+        "tensile_strength_kn": 781.3,
+        "allowable_load_kn": 160.9,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "3x Longer Life",
+        "RoHS Compliant",
+        "Extreme Environment"
+      ],
+      "applications": [
+        "Marine",
+        "Chemical Plant",
+        "Outdoor",
+        "Corrosive Environment"
+      ],
+      "tsubaki_code": "NP200-1-NEPTUNE",
+      "base_chain": "RS200",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0062",
+      "category": "Drive Chain",
+      "series": "NEPTUNE",
+      "model": "NP200-2",
+      "name": "NEPTUNE NP200 Double Strand Corrosion Resistant Chain",
+      "specifications": {
+        "pitch_mm": 63.5,
+        "strands": 2,
+        "tensile_strength_kn": 1328.2099999999998,
+        "allowable_load_kn": 273.53000000000003,
+        "material": "Multi-Layer Plated Steel",
+        "temperature_range": "-40°C to 200°C",
+        "surface_treatment": "Multi-Layer Plating",
+        "corrosion_resistance": "1000 Hour Salt Spray Test"
+      },
+      "features": [
+        "Corrosion Resistant",
+        "Double Strength",
+        "3x Longer Life",
+        "RoHS Compliant"
+      ],
+      "applications": [
+        "Heavy Marine",
+        "High Power Chemical",
+        "Extreme Outdoor"
+      ],
+      "tsubaki_code": "NP200-2-NEPTUNE",
+      "base_chain": "RS200",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0063",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP40-1",
+      "name": "Super SP40 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 1,
+        "tensile_strength_kn": 50.3,
+        "allowable_load_kn": 13.1,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP40-1-SUPER",
+      "base_chain": "RS40",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0064",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP40-2",
+      "name": "Super SP40 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 2,
+        "tensile_strength_kn": 85.50999999999999,
+        "allowable_load_kn": 22.27,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP40-2-SUPER",
+      "base_chain": "RS40",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0065",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP50-1",
+      "name": "Super SP50 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 1,
+        "tensile_strength_kn": 79.1,
+        "allowable_load_kn": 23.1,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP50-1-SUPER",
+      "base_chain": "RS50",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0066",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP50-2",
+      "name": "Super SP50 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 2,
+        "tensile_strength_kn": 134.47,
+        "allowable_load_kn": 39.27,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP50-2-SUPER",
+      "base_chain": "RS50",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0067",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP60-1",
+      "name": "Super SP60 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 1,
+        "tensile_strength_kn": 113.4,
+        "allowable_load_kn": 32.0,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP60-1-SUPER",
+      "base_chain": "RS60",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0068",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP60-2",
+      "name": "Super SP60 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 2,
+        "tensile_strength_kn": 192.78,
+        "allowable_load_kn": 54.4,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP60-2-SUPER",
+      "base_chain": "RS60",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0069",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP80-1",
+      "name": "Super SP80 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 1,
+        "tensile_strength_kn": 202.5,
+        "allowable_load_kn": 53.4,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP80-1-SUPER",
+      "base_chain": "RS80",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0070",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP80-2",
+      "name": "Super SP80 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 2,
+        "tensile_strength_kn": 344.25,
+        "allowable_load_kn": 90.78,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP80-2-SUPER",
+      "base_chain": "RS80",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0071",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP100-1",
+      "name": "Super SP100 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 1,
+        "tensile_strength_kn": 316.0,
+        "allowable_load_kn": 82.0,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP100-1-SUPER",
+      "base_chain": "RS100",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0072",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP100-2",
+      "name": "Super SP100 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 2,
+        "tensile_strength_kn": 537.1999999999999,
+        "allowable_load_kn": 139.4,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP100-2-SUPER",
+      "base_chain": "RS100",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0073",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP120-1",
+      "name": "Super SP120 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "strands": 1,
+        "tensile_strength_kn": 455.2,
+        "allowable_load_kn": 110.5,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP120-1-SUPER",
+      "base_chain": "RS120",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0074",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP120-2",
+      "name": "Super SP120 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 38.1,
+        "strands": 2,
+        "tensile_strength_kn": 773.8399999999999,
+        "allowable_load_kn": 187.85,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP120-2-SUPER",
+      "base_chain": "RS120",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0075",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP140-1",
+      "name": "Super SP140 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "strands": 1,
+        "tensile_strength_kn": 619.7,
+        "allowable_load_kn": 146.3,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP140-1-SUPER",
+      "base_chain": "RS140",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0076",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP140-2",
+      "name": "Super SP140 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 44.45,
+        "strands": 2,
+        "tensile_strength_kn": 1053.49,
+        "allowable_load_kn": 248.71,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP140-2-SUPER",
+      "base_chain": "RS140",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0077",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP160-1",
+      "name": "Super SP160 High Strength Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "strands": 1,
+        "tensile_strength_kn": 810.0,
+        "allowable_load_kn": 192.7,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "1-2 Size Reduction",
+        "Heat Treated",
+        "Ultra Strong"
+      ],
+      "applications": [
+        "Heavy Machinery",
+        "Mining",
+        "Steel Mills",
+        "High Load"
+      ],
+      "tsubaki_code": "SP160-1-SUPER",
+      "base_chain": "RS160",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0078",
+      "category": "Drive Chain",
+      "series": "Super",
+      "model": "SP160-2",
+      "name": "Super SP160 Double Strand High Strength Chain",
+      "specifications": {
+        "pitch_mm": 50.8,
+        "strands": 2,
+        "tensile_strength_kn": 1377.0,
+        "allowable_load_kn": 327.59,
+        "material": "High Carbon Steel",
+        "temperature_range": "-20°C to 150°C",
+        "surface_treatment": "Heat Treated",
+        "strength_improvement": "162% vs Standard"
+      },
+      "features": [
+        "162% Higher Load",
+        "Double Strength",
+        "Heat Treated",
+        "Maximum Power"
+      ],
+      "applications": [
+        "Ultra Heavy Duty",
+        "Mining Equipment",
+        "Steel Processing"
+      ],
+      "tsubaki_code": "SP160-2-SUPER",
+      "base_chain": "RS160",
+      "connecting_link": "Heavy Duty"
+    },
+    {
+      "id": "TSK_0079",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS40-1",
+      "name": "Stainless SS40 SUS304 Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 1,
+        "tensile_strength_kn": 28.0,
+        "allowable_load_kn": 7.3,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS40-1-SUS304",
+      "base_chain": "RS40",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0080",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS40-2",
+      "name": "Stainless SS40 SUS304 Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 2,
+        "tensile_strength_kn": 47.6,
+        "allowable_load_kn": 12.41,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS40-2-SUS304",
+      "base_chain": "RS40",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0081",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS50-1",
+      "name": "Stainless SS50 SUS304 Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 1,
+        "tensile_strength_kn": 44.0,
+        "allowable_load_kn": 12.9,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS50-1-SUS304",
+      "base_chain": "RS50",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0082",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS50-2",
+      "name": "Stainless SS50 SUS304 Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 2,
+        "tensile_strength_kn": 74.8,
+        "allowable_load_kn": 21.93,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS50-2-SUS304",
+      "base_chain": "RS50",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0083",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS60-1",
+      "name": "Stainless SS60 SUS304 Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 1,
+        "tensile_strength_kn": 63.1,
+        "allowable_load_kn": 17.8,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS60-1-SUS304",
+      "base_chain": "RS60",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0084",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS60-2",
+      "name": "Stainless SS60 SUS304 Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 2,
+        "tensile_strength_kn": 107.27,
+        "allowable_load_kn": 30.26,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS60-2-SUS304",
+      "base_chain": "RS60",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0085",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS80-1",
+      "name": "Stainless SS80 SUS304 Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 1,
+        "tensile_strength_kn": 112.5,
+        "allowable_load_kn": 29.7,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS80-1-SUS304",
+      "base_chain": "RS80",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0086",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS80-2",
+      "name": "Stainless SS80 SUS304 Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 2,
+        "tensile_strength_kn": 191.25,
+        "allowable_load_kn": 50.489999999999995,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS80-2-SUS304",
+      "base_chain": "RS80",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0087",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS100-1",
+      "name": "Stainless SS100 SUS304 Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 1,
+        "tensile_strength_kn": 175.8,
+        "allowable_load_kn": 45.6,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS100-1-SUS304",
+      "base_chain": "RS100",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0088",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS100-2",
+      "name": "Stainless SS100 SUS304 Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 2,
+        "tensile_strength_kn": 298.86,
+        "allowable_load_kn": 77.52,
+        "material": "Stainless Steel SUS304",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS100-2-SUS304",
+      "base_chain": "RS100",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0089",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS40L-1",
+      "name": "Stainless SS40L SUS316L Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 1,
+        "tensile_strength_kn": 31.1,
+        "allowable_load_kn": 8.1,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS40L-1-SUS316L",
+      "base_chain": "RS40",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0090",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS40L-2",
+      "name": "Stainless SS40L SUS316L Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 12.7,
+        "strands": 2,
+        "tensile_strength_kn": 52.870000000000005,
+        "allowable_load_kn": 13.77,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS40L-2-SUS316L",
+      "base_chain": "RS40",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0091",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS50L-1",
+      "name": "Stainless SS50L SUS316L Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 1,
+        "tensile_strength_kn": 48.9,
+        "allowable_load_kn": 14.3,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS50L-1-SUS316L",
+      "base_chain": "RS50",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0092",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS50L-2",
+      "name": "Stainless SS50L SUS316L Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 15.875,
+        "strands": 2,
+        "tensile_strength_kn": 83.13,
+        "allowable_load_kn": 24.310000000000002,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS50L-2-SUS316L",
+      "base_chain": "RS50",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0093",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS60L-1",
+      "name": "Stainless SS60L SUS316L Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 1,
+        "tensile_strength_kn": 70.1,
+        "allowable_load_kn": 19.8,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS60L-1-SUS316L",
+      "base_chain": "RS60",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0094",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS60L-2",
+      "name": "Stainless SS60L SUS316L Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 19.05,
+        "strands": 2,
+        "tensile_strength_kn": 119.16999999999999,
+        "allowable_load_kn": 33.660000000000004,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS60L-2-SUS316L",
+      "base_chain": "RS60",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0095",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS80L-1",
+      "name": "Stainless SS80L SUS316L Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 1,
+        "tensile_strength_kn": 125.0,
+        "allowable_load_kn": 33.0,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS80L-1-SUS316L",
+      "base_chain": "RS80",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0096",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS80L-2",
+      "name": "Stainless SS80L SUS316L Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 25.4,
+        "strands": 2,
+        "tensile_strength_kn": 212.5,
+        "allowable_load_kn": 56.1,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS80L-2-SUS316L",
+      "base_chain": "RS80",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0097",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS100L-1",
+      "name": "Stainless SS100L SUS316L Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 1,
+        "tensile_strength_kn": 195.3,
+        "allowable_load_kn": 50.7,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "High Temperature",
+        "Food Safe",
+        "Chemical Resistant"
+      ],
+      "applications": [
+        "Food Processing",
+        "Chemical",
+        "Marine",
+        "High Temperature"
+      ],
+      "tsubaki_code": "SS100L-1-SUS316L",
+      "base_chain": "RS100",
+      "connecting_link": "Stainless"
+    },
+    {
+      "id": "TSK_0098",
+      "category": "Drive Chain",
+      "series": "Stainless Steel",
+      "model": "SS100L-2",
+      "name": "Stainless SS100L SUS316L Double Strand Chain",
+      "specifications": {
+        "pitch_mm": 31.75,
+        "strands": 2,
+        "tensile_strength_kn": 332.01,
+        "allowable_load_kn": 86.19,
+        "material": "Stainless Steel SUS316L",
+        "temperature_range": "-200°C to 400°C",
+        "surface_treatment": "Passivated",
+        "corrosion_resistance": "Excellent"
+      },
+      "features": [
+        "Corrosion Proof",
+        "Double Strength",
+        "High Temperature",
+        "Food Safe"
+      ],
+      "applications": [
+        "Heavy Food Processing",
+        "Chemical Plant",
+        "Marine Heavy Duty"
+      ],
+      "tsubaki_code": "SS100L-2-SUS316L",
+      "base_chain": "RS100",
+      "connecting_link": "Stainless"
+    }
+  ]
+}

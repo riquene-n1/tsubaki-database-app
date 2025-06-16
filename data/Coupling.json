@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "category": "Coupling",
+    "product_count": 9,
+    "last_updated": "2024-12-08",
+    "version": "2.0"
+  },
+  "products": [
+    {
+      "id": "TSK_0374",
+      "category": "Coupling",
+      "series": "Chain Coupling",
+      "model": "RSC-40",
+      "name": "RSC-40 Chain Coupling",
+      "specifications": {
+        "rated_torque_nm": 85,
+        "bore_range_mm": "6-19",
+        "coupling_type": "Chain",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RSC-40",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0375",
+      "category": "Coupling",
+      "series": "Chain Coupling",
+      "model": "RSC-50",
+      "name": "RSC-50 Chain Coupling",
+      "specifications": {
+        "rated_torque_nm": 170,
+        "bore_range_mm": "8-25",
+        "coupling_type": "Chain",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RSC-50",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0376",
+      "category": "Coupling",
+      "series": "Chain Coupling",
+      "model": "RSC-60",
+      "name": "RSC-60 Chain Coupling",
+      "specifications": {
+        "rated_torque_nm": 260,
+        "bore_range_mm": "10-30",
+        "coupling_type": "Chain",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RSC-60",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0377",
+      "category": "Coupling",
+      "series": "Chain Coupling",
+      "model": "RSC-80",
+      "name": "RSC-80 Chain Coupling",
+      "specifications": {
+        "rated_torque_nm": 480,
+        "bore_range_mm": "12-38",
+        "coupling_type": "Chain",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RSC-80",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0378",
+      "category": "Coupling",
+      "series": "Chain Coupling",
+      "model": "RSC-100",
+      "name": "RSC-100 Chain Coupling",
+      "specifications": {
+        "rated_torque_nm": 750,
+        "bore_range_mm": "15-48",
+        "coupling_type": "Chain",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "RSC-100",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0379",
+      "category": "Coupling",
+      "series": "Disc Coupling",
+      "model": "DFC-80",
+      "name": "DFC-80 Disc Coupling",
+      "specifications": {
+        "rated_torque_nm": 120,
+        "bore_range_mm": "10-30",
+        "coupling_type": "Disc",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "DFC-80",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0380",
+      "category": "Coupling",
+      "series": "Disc Coupling",
+      "model": "DFC-125",
+      "name": "DFC-125 Disc Coupling",
+      "specifications": {
+        "rated_torque_nm": 280,
+        "bore_range_mm": "15-40",
+        "coupling_type": "Disc",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "DFC-125",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0381",
+      "category": "Coupling",
+      "series": "Disc Coupling",
+      "model": "DFC-160",
+      "name": "DFC-160 Disc Coupling",
+      "specifications": {
+        "rated_torque_nm": 560,
+        "bore_range_mm": "20-50",
+        "coupling_type": "Disc",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "DFC-160",
+      "mounting": "Hub Connection"
+    },
+    {
+      "id": "TSK_0382",
+      "category": "Coupling",
+      "series": "Disc Coupling",
+      "model": "DFC-200",
+      "name": "DFC-200 Disc Coupling",
+      "specifications": {
+        "rated_torque_nm": 1120,
+        "bore_range_mm": "25-65",
+        "coupling_type": "Disc",
+        "material": "Carbon Steel",
+        "temperature_range": "-20°C to 120°C",
+        "max_rpm": 3600
+      },
+      "features": [
+        "High Torque",
+        "Misalignment Tolerance",
+        "Easy Installation"
+      ],
+      "applications": [
+        "Motor Coupling",
+        "Power Transmission",
+        "Industrial Drives"
+      ],
+      "tsubaki_code": "DFC-200",
+      "mounting": "Hub Connection"
+    }
+  ]
+}

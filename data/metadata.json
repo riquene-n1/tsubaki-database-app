@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Tsubaki Chain Complete Product Database",
+    "version": "2.0",
+    "total_products": 12140,
+    "categories": {
+      "Drive Chain": 98,
+      "Sprocket": 11953,
+      "Conveyor Chain": 20,
+      "Timing Belt": 40,
+      "Reducer": 7,
+      "Coupling": 9,
+      "Linear Actuator": 8,
+      "Cable Carrier": 5
+    },
+    "last_updated": "2024-12-08",
+    "description": "Complete Tsubaki product database including drive chains, sprockets, conveyor chains, timing belts, and mechanical components"
+  }
+}

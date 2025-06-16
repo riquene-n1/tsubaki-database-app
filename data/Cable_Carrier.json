@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "category": "Cable Carrier",
+    "product_count": 5,
+    "last_updated": "2024-12-08",
+    "version": "2.0"
+  },
+  "products": [
+    {
+      "id": "TSK_0391",
+      "category": "Cable Carrier",
+      "series": "TKP Series",
+      "model": "TKP15",
+      "name": "TKP15 Cable Carrier",
+      "specifications": {
+        "height_mm": 15,
+        "width_mm": 25,
+        "bend_radius_mm": 28,
+        "max_speed_mps": 3.0,
+        "material": "Nylon/Steel",
+        "temperature_range": "-40°C to 80°C"
+      },
+      "features": [
+        "Smooth Movement",
+        "Cable Protection",
+        "Long Life"
+      ],
+      "applications": [
+        "Machine Tools",
+        "Robotics",
+        "Automation"
+      ],
+      "tsubaki_code": "TKP15",
+      "mounting": "Standard Brackets"
+    },
+    {
+      "id": "TSK_0392",
+      "category": "Cable Carrier",
+      "series": "TKP Series",
+      "model": "TKP25",
+      "name": "TKP25 Cable Carrier",
+      "specifications": {
+        "height_mm": 25,
+        "width_mm": 38,
+        "bend_radius_mm": 48,
+        "max_speed_mps": 4.0,
+        "material": "Nylon/Steel",
+        "temperature_range": "-40°C to 80°C"
+      },
+      "features": [
+        "Smooth Movement",
+        "Cable Protection",
+        "Long Life"
+      ],
+      "applications": [
+        "Machine Tools",
+        "Robotics",
+        "Automation"
+      ],
+      "tsubaki_code": "TKP25",
+      "mounting": "Standard Brackets"
+    },
+    {
+      "id": "TSK_0393",
+      "category": "Cable Carrier",
+      "series": "TKP Series",
+      "model": "TKP35",
+      "name": "TKP35 Cable Carrier",
+      "specifications": {
+        "height_mm": 35,
+        "width_mm": 50,
+        "bend_radius_mm": 75,
+        "max_speed_mps": 5.0,
+        "material": "Nylon/Steel",
+        "temperature_range": "-40°C to 80°C"
+      },
+      "features": [
+        "Smooth Movement",
+        "Cable Protection",
+        "Long Life"
+      ],
+      "applications": [
+        "Machine Tools",
+        "Robotics",
+        "Automation"
+      ],
+      "tsubaki_code": "TKP35",
+      "mounting": "Standard Brackets"
+    },
+    {
+      "id": "TSK_0394",
+      "category": "Cable Carrier",
+      "series": "TKP Series",
+      "model": "TKP45",
+      "name": "TKP45 Cable Carrier",
+      "specifications": {
+        "height_mm": 45,
+        "width_mm": 75,
+        "bend_radius_mm": 100,
+        "max_speed_mps": 6.0,
+        "material": "Nylon/Steel",
+        "temperature_range": "-40°C to 80°C"
+      },
+      "features": [
+        "Smooth Movement",
+        "Cable Protection",
+        "Long Life"
+      ],
+      "applications": [
+        "Machine Tools",
+        "Robotics",
+        "Automation"
+      ],
+      "tsubaki_code": "TKP45",
+      "mounting": "Standard Brackets"
+    },
+    {
+      "id": "TSK_0395",
+      "category": "Cable Carrier",
+      "series": "TKP Series",
+      "model": "TKP55",
+      "name": "TKP55 Cable Carrier",
+      "specifications": {
+        "height_mm": 55,
+        "width_mm": 100,
+        "bend_radius_mm": 125,
+        "max_speed_mps": 8.0,
+        "material": "Nylon/Steel",
+        "temperature_range": "-40°C to 80°C"
+      },
+      "features": [
+        "Smooth Movement",
+        "Cable Protection",
+        "Long Life"
+      ],
+      "applications": [
+        "Machine Tools",
+        "Robotics",
+        "Automation"
+      ],
+      "tsubaki_code": "TKP55",
+      "mounting": "Standard Brackets"
+    }
+  ]
+}

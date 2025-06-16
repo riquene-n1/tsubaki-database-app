@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "category": "Reducer",
+    "product_count": 7,
+    "last_updated": "2024-12-08",
+    "version": "2.0"
+  },
+  "products": [
+    {
+      "id": "TSK_0367",
+      "category": "Reducer",
+      "series": "TERVO Servo",
+      "model": "TERVO-050",
+      "name": "TERVO TERVO-050 Servo Reducer",
+      "specifications": {
+        "reduction_ratio": "3-100",
+        "input_power_kw": 0.1,
+        "output_torque_nm": 50,
+        "backlash_arcmin": "10-70",
+        "efficiency_percent": 95,
+        "temperature_range": "-10°C to 90°C"
+      },
+      "features": [
+        "High Precision",
+        "Low Backlash",
+        "Servo Optimized",
+        "Compact Design"
+      ],
+      "applications": [
+        "Servo Systems",
+        "Robotics",
+        "CNC",
+        "Precision Automation"
+      ],
+      "tsubaki_code": "TERVO-050",
+      "mounting": "Flange/Foot"
+    },
+    {
+      "id": "TSK_0368",
+      "category": "Reducer",
+      "series": "TERVO Servo",
+      "model": "TERVO-075",
+      "name": "TERVO TERVO-075 Servo Reducer",
+      "specifications": {
+        "reduction_ratio": "3-100",
+        "input_power_kw": 0.2,
+        "output_torque_nm": 75,
+        "backlash_arcmin": "10-70",
+        "efficiency_percent": 95,
+        "temperature_range": "-10°C to 90°C"
+      },
+      "features": [
+        "High Precision",
+        "Low Backlash",
+        "Servo Optimized",
+        "Compact Design"
+      ],
+      "applications": [
+        "Servo Systems",
+        "Robotics",
+        "CNC",
+        "Precision Automation"
+      ],
+      "tsubaki_code": "TERVO-075",
+      "mounting": "Flange/Foot"
+    },
+    {
+      "id": "TSK_0369",
+      "category": "Reducer",
+      "series": "TERVO Servo",
+      "model": "TERVO-100",
+      "name": "TERVO TERVO-100 Servo Reducer",
+      "specifications": {
+        "reduction_ratio": "3-100",
+        "input_power_kw": 0.4,
+        "output_torque_nm": 100,
+        "backlash_arcmin": "10-70",
+        "efficiency_percent": 95,
+        "temperature_range": "-10°C to 90°C"
+      },
+      "features": [
+        "High Precision",
+        "Low Backlash",
+        "Servo Optimized",
+        "Compact Design"
+      ],
+      "applications": [
+        "Servo Systems",
+        "Robotics",
+        "CNC",
+        "Precision Automation"
+      ],
+      "tsubaki_code": "TERVO-100",
+      "mounting": "Flange/Foot"
+    },
+    {
+      "id": "TSK_0370",
+      "category": "Reducer",
+      "series": "TERVO Servo",
+      "model": "TERVO-140",
+      "name": "TERVO TERVO-140 Servo Reducer",
+      "specifications": {
+        "reduction_ratio": "3-100",
+        "input_power_kw": 0.75,
+        "output_torque_nm": 140,
+        "backlash_arcmin": "10-70",
+        "efficiency_percent": 95,
+        "temperature_range": "-10°C to 90°C"
+      },
+      "features": [
+        "High Precision",
+        "Low Backlash",
+        "Servo Optimized",
+        "Compact Design"
+      ],
+      "applications": [
+        "Servo Systems",
+        "Robotics",
+        "CNC",
+        "Precision Automation"
+      ],
+      "tsubaki_code": "TERVO-140",
+      "mounting": "Flange/Foot"
+    },
+    {
+      "id": "TSK_0371",
+      "category": "Reducer",
+      "series": "TERVO Servo",
+      "model": "TERVO-200",
+      "name": "TERVO TERVO-200 Servo Reducer",
+      "specifications": {
+        "reduction_ratio": "3-100",
+        "input_power_kw": 1.5,
+        "output_torque_nm": 200,
+        "backlash_arcmin": "10-70",
+        "efficiency_percent": 95,
+        "temperature_range": "-10°C to 90°C"
+      },
+      "features": [
+        "High Precision",
+        "Low Backlash",
+        "Servo Optimized",
+        "Compact Design"
+      ],
+      "applications": [
+        "Servo Systems",
+        "Robotics",
+        "CNC",
+        "Precision Automation"
+      ],
+      "tsubaki_code": "TERVO-200",
+      "mounting": "Flange/Foot"
+    },
+    {
+      "id": "TSK_0372",
+      "category": "Reducer",
+      "series": "TERVO Servo",
+      "model": "TERVO-280",
+      "name": "TERVO TERVO-280 Servo Reducer",
+      "specifications": {
+        "reduction_ratio": "3-100",
+        "input_power_kw": 3.0,
+        "output_torque_nm": 280,
+        "backlash_arcmin": "10-70",
+        "efficiency_percent": 95,
+        "temperature_range": "-10°C to 90°C"
+      },
+      "features": [
+        "High Precision",
+        "Low Backlash",
+        "Servo Optimized",
+        "Compact Design"
+      ],
+      "applications": [
+        "Servo Systems",
+        "Robotics",
+        "CNC",
+        "Precision Automation"
+      ],
+      "tsubaki_code": "TERVO-280",
+      "mounting": "Flange/Foot"
+    },
+    {
+      "id": "TSK_0373",
+      "category": "Reducer",
+      "series": "TERVO Servo",
+      "model": "TERVO-400",
+      "name": "TERVO TERVO-400 Servo Reducer",
+      "specifications": {
+        "reduction_ratio": "3-100",
+        "input_power_kw": 5.0,
+        "output_torque_nm": 400,
+        "backlash_arcmin": "10-70",
+        "efficiency_percent": 95,
+        "temperature_range": "-10°C to 90°C"
+      },
+      "features": [
+        "High Precision",
+        "Low Backlash",
+        "Servo Optimized",
+        "Compact Design"
+      ],
+      "applications": [
+        "Servo Systems",
+        "Robotics",
+        "CNC",
+        "Precision Automation"
+      ],
+      "tsubaki_code": "TERVO-400",
+      "mounting": "Flange/Foot"
+    }
+  ]
+}

@@ -1,4 +1,7 @@
 // Tsubaki Chain Database Application
+let isLoggedIn = false;
+let currentUser = null;
+
 class TsubakiDatabase {
     constructor() {
         this.products = [];
@@ -8,15 +11,18 @@ class TsubakiDatabase {
         this.currentSection = 'home';
         this.currentTheme = 'dark';
         this.categories = {
-            "Drive Chain": 98,
-            "Sprocket": 11953,
-            "Conveyor Chain": 20,
-            "Timing Belt": 40,
-            "Reducer": 7,
-            "Coupling": 9,
-            "Linear Actuator": 8,
-            "Cable Carrier": 5
+            "Drive Chain": "drive_chain",        // API 엔드포인트에 맞게 수정
+            "Sprocket": "sprocket",
+            "Conveyor Chain": "conveyor_chain",
+            "Timing Belt": "timing_belt",
+            "Reducer": "reducer",
+            "Coupling": "coupling",
+            "Linear Actuator": "linear_actuator",
+            "Cable Carrier": "cable_carrier",
+            "Metadata": "metadata"               // METADATA_JSON 테이블도 있다면 추가
         };
+        // 백엔드 API의 기본 URL 설정. 백엔드 서버가 3000번 포트에서 실행된다고 가정.
+        this.apiBaseUrl = 'http://localhost:3000/api'; 
         
         this.init();
     }
@@ -26,745 +32,464 @@ class TsubakiDatabase {
         this.setupTheme();
         this.renderCategories();
         
-        // Load products with timeout
+        // 데이터 로딩 시도 (API로부터)
         try {
             await Promise.race([
-                this.loadProducts(),
-                new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000))
+                this.loadAllProductsFromAPI(), // Oracle DB에서 데이터를 가져오는 함수
+                new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout: API data loading took too long.')), 15000)) // 15초 타임아웃
             ]);
+            console.log("Products successfully loaded from API.");
         } catch (error) {
-            console.log('외부 데이터 로딩 실패, 샘플 데이터 사용:', error.message);
-            this.loadSampleData();
+            console.log('데이터 로딩 실패 또는 타임아웃:', error.message);
+            // 에러 발생 시 사용자에게 알림을 주거나, 대체 로직(예: 샘플 데이터 로드) 추가
+            document.getElementById('loading').textContent = '데이터 로딩 실패. 백엔드 서버가 실행 중인지 확인해주세요.';
+            // this.loadSampleData(); // 필요한 경우 샘플 데이터 로드 (오프라인/에러 대비)
         }
         
         this.setupFilters();
         this.showLoading(false);
     }
     
+    // 백엔드 API에서 모든 제품 데이터를 가져오는 함수
+    async loadAllProductsFromAPI() {
+        this.showLoading(true);
+        const productData = [];
+
+        for (const categoryName in this.categories) {
+            const apiEndpointSuffix = this.categories[categoryName];
+            const url = `${this.apiBaseUrl}/${apiEndpointSuffix}`;
+            try {
+                console.log(`Fetching data from: ${url}`);
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}, URL: ${url}`);
+                }
+                const data = await response.json();
+                
+                // 각 제품 객체에 category 필드 추가 (나중에 필터링 및 표시를 위해 유용)
+                const productsWithCategory = data.map(product => ({ ...product, category: categoryName }));
+                productData.push(...productsWithCategory);
+            } catch (error) {
+                console.error(`Failed to load data for ${categoryName} from ${url}:`, error);
+                // 특정 카테고리 로드 실패 시에도 전체 로딩이 멈추지 않도록 처리
+                // 사용자에게 부분적인 오류를 알릴 수 있음
+            }
+        }
+        this.products = productData;
+        this.filteredProducts = [...this.products]; // 초기 필터링된 제품 설정
+        console.log("All products loaded:", this.products);
+        this.renderProducts(); // 데이터 로드 후 제품 목록 렌더링
+    }
+
+    // 기존 loadProducts 함수는 더 이상 사용되지 않음 (로컬 파일 로딩)
+    // 필요한 경우 백업을 위해 주석 처리하거나 삭제합니다.
+    /*
     async loadProducts() {
-        try {
-            this.showLoading(true);
-            const response = await fetch('https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/45eddab68ce2b005c5a899efc3cad59c/45b16cfd-cd75-478b-854a-40e5e8c8a30f/0aeef7cb.json');
-            
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            
-            const data = await response.json();
-            this.products = data.products || [];
-            this.filteredProducts = [...this.products];
-            
-            // Update total count with actual data
-            document.getElementById('totalProducts').textContent = this.products.length.toLocaleString();
-            
-            console.log(`로딩된 제품 수: ${this.products.length}`);
-            return true;
-        } catch (error) {
-            console.error('제품 데이터 로딩 실패:', error);
-            throw error;
-        }
-    }
-    
-    loadSampleData() {
-        // Generate more comprehensive sample data
-        const sampleProducts = [];
-        const categories = Object.keys(this.categories);
-        const series = ['RS Standard', 'LAMBDA', 'NEPTUNE', 'Super', 'Stainless'];
-        const materials = ['Carbon Steel', 'Stainless Steel', 'Nickel Plated'];
-        const pitches = [6.35, 9.525, 12.7, 15.875, 19.05, 25.4, 31.75, 38.1, 50.8];
+        this.showLoading(true);
+        const files = [
+            "data/Drive_Chain.json",
+            "data/Coupling.json",
+            "data/Cable_Carrier.json",
+            "data/Conveyor_Chain.json",
+            "data/Linear_Actuator.json",
+            "data/Reducer.json",
+            "data/Sprocket.json",
+            "data/Timing_Belt.json"
+        ];
         
-        // Generate sample products for each category
-        categories.forEach((category, catIndex) => {
-            const count = Math.min(this.categories[category], 100); // Limit to 100 per category for demo
-            
-            for (let i = 0; i < count; i++) {
-                const product = {
-                    id: `TSK_${String(catIndex * 1000 + i + 1).padStart(4, '0')}`,
-                    category: category,
-                    series: series[i % series.length],
-                    model: `${category.replace(' ', '').substring(0, 2).toUpperCase()}${i + 1}-${Math.floor(Math.random() * 100)}`,
-                    name: `${category} ${series[i % series.length]} Model ${i + 1}`,
-                    specifications: {
-                        pitch_mm: pitches[i % pitches.length],
-                        material: materials[i % materials.length],
-                        temperature_range: "-20°C to 120°C"
-                    },
-                    features: ["고품질", "내구성", "정밀가공"],
-                    applications: ["산업용", "제조업", "자동화"],
-                    tsubaki_code: `TSK-${category.replace(' ', '').substring(0, 2).toUpperCase()}-${i + 1}`
-                };
-                
-                // Add category-specific specifications
-                if (category === 'Drive Chain') {
-                    product.specifications.strands = Math.floor(Math.random() * 3) + 1;
-                    product.specifications.tensile_strength_kn = 50 + Math.random() * 100;
-                } else if (category === 'Sprocket') {
-                    product.specifications.tooth_count = 10 + Math.floor(Math.random() * 40);
-                    product.specifications.hub_type = ['A', 'B', 'C'][Math.floor(Math.random() * 3)];
+        const allProducts = [];
+        for (const file of files) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                
-                sampleProducts.push(product);
+                const data = await response.json();
+                const categoryName = file.split('/').pop().replace('.json', '').replace('_', ' '); // 파일명에서 카테고리 이름 추출
+                const productsWithCategory = data.map(product => ({ ...product, category: categoryName }));
+                allProducts.push(...productsWithCategory);
+            } catch (error) {
+                console.error(`Failed to load ${file}:`, error);
             }
-        });
-        
-        this.products = sampleProducts;
+        }
+        this.products = allProducts;
         this.filteredProducts = [...this.products];
-        
-        // Update total count
-        document.getElementById('totalProducts').textContent = this.products.length.toLocaleString();
-        console.log(`샘플 데이터 로딩 완료: ${this.products.length}개 제품`);
+        this.renderProducts();
     }
-    
+    */
+
+    // // 임시 샘플 데이터 로드 (API 로딩 실패 시 사용 가능)
+    // loadSampleData() {
+    //     this.products = [
+    //         { id: 1, name: "Sample Drive Chain A", category: "Drive Chain", description: "This is a sample drive chain.", specifications: { pitch: "15.875mm" }, image: "https://via.placeholder.com/150", price: 100 },
+    //         { id: 2, name: "Sample Sprocket B", category: "Sprocket", description: "This is a sample sprocket.", specifications: { teeth: "25" }, image: "https://via.placeholder.com/150", price: 50 },
+    //         // 더 많은 샘플 데이터 추가 가능
+    //     ];
+    //     this.filteredProducts = [...this.products];
+    //     this.renderProducts();
+    // }
+
     setupEventListeners() {
+        // ... (기존과 동일)
+        document.getElementById('loginBtn').addEventListener('click', () => this.showLoginModal());
+        document.getElementById('logoutBtn').addEventListener('click', () => this.logout());
+        document.getElementById('submitLogin').addEventListener('click', () => this.handleLogin());
+        document.getElementById('themeToggle').addEventListener('click', () => this.toggleTheme());
+
+        document.getElementById('categoryGrid').addEventListener('click', (e) => {
+            if (e.target.closest('.category-card')) {
+                const categoryName = e.target.closest('.category-card').dataset.category;
+                this.filterByCategory(categoryName);
+            }
+        });
+
+        document.getElementById('showAllProductsBtn').addEventListener('click', () => this.showAllProducts());
+        document.getElementById('searchInput').addEventListener('input', (e) => this.searchProducts(e.target.value));
+        document.getElementById('sortSelect').addEventListener('change', (e) => this.sortProducts(e.target.value));
+        document.getElementById('prevPage').addEventListener('click', () => this.changePage(-1));
+        document.getElementById('nextPage').addEventListener('click', () => this.changePage(1));
+
         // Navigation
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                const section = e.target.dataset.section;
-                this.navigateToSection(section);
+        document.querySelectorAll('.nav-item').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const section = e.currentTarget.dataset.section;
+                this.showSection(section);
             });
         });
-        
-        // Back to home buttons
-        const backToHomeBtn = document.getElementById('backToHome');
-        if (backToHomeBtn) {
-            backToHomeBtn.addEventListener('click', () => this.navigateToSection('home'));
-        }
-        
-        const backToHomeFromCalcBtn = document.getElementById('backToHomeFromCalc');
-        if (backToHomeFromCalcBtn) {
-            backToHomeFromCalcBtn.addEventListener('click', () => this.navigateToSection('home'));
-        }
-        
-        const backToHomeFromGuideBtn = document.getElementById('backToHomeFromGuide');
-        if (backToHomeFromGuideBtn) {
-            backToHomeFromGuideBtn.addEventListener('click', () => this.navigateToSection('home'));
-        }
-        
-        // Search functionality
-        const searchBtn = document.getElementById('searchBtn');
-        if (searchBtn) {
-            searchBtn.addEventListener('click', () => this.performSearch());
-        }
-        
-        const mainSearch = document.getElementById('mainSearch');
-        if (mainSearch) {
-            mainSearch.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') this.performSearch();
-            });
-        }
-        
-        // Filters
-        const categoryFilter = document.getElementById('categoryFilter');
-        if (categoryFilter) {
-            categoryFilter.addEventListener('change', () => this.applyFilters());
-        }
-        
-        const seriesFilter = document.getElementById('seriesFilter');
-        if (seriesFilter) {
-            seriesFilter.addEventListener('change', () => this.applyFilters());
-        }
-        
-        const pitchFilter = document.getElementById('pitchFilter');
-        if (pitchFilter) {
-            pitchFilter.addEventListener('change', () => this.applyFilters());
-        }
-        
-        const materialFilter = document.getElementById('materialFilter');
-        if (materialFilter) {
-            materialFilter.addEventListener('change', () => this.applyFilters());
-        }
-        
-        const clearFiltersBtn = document.getElementById('clearFilters');
-        if (clearFiltersBtn) {
-            clearFiltersBtn.addEventListener('click', () => this.clearFilters());
-        }
-        
-        // Theme toggle
-        const themeToggle = document.getElementById('themeToggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => this.toggleTheme());
-        }
-        
-        // Modal
-        const modalClose = document.getElementById('modalClose');
-        if (modalClose) {
-            modalClose.addEventListener('click', () => this.closeModal());
-        }
-        
-        const modalBackdrop = document.getElementById('modalBackdrop');
-        if (modalBackdrop) {
-            modalBackdrop.addEventListener('click', () => this.closeModal());
-        }
-        
-        // Calculator tabs
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const tab = e.target.dataset.tab;
-                this.switchCalculatorTab(tab);
-            });
+
+        // Calculator type toggle
+        document.getElementById('calcTypeToggle').addEventListener('change', (e) => {
+            const basicCalc = document.getElementById('basicCalc');
+            const chainCalc = document.getElementById('chainCalc');
+            if (e.target.value === 'basic') {
+                basicCalc.classList.remove('hidden');
+                chainCalc.classList.add('hidden');
+            } else {
+                basicCalc.classList.add('hidden');
+                chainCalc.classList.remove('hidden');
+            }
         });
-        
-        // Export
-        const exportBtn = document.getElementById('exportBtn');
-        if (exportBtn) {
-            exportBtn.addEventListener('click', () => this.exportData());
+
+        // Modal close button
+        document.getElementById('closeModal').addEventListener('click', () => this.closeModal());
+        // Back to home from product list
+        document.getElementById('backToHomeFromProducts').addEventListener('click', () => this.showSection('home'));
+        // Back to home from guide
+        document.getElementById('backToHomeFromGuide').addEventListener('click', () => this.showSection('home'));
+    }
+
+    showLoginModal() {
+        document.getElementById('loginSection').classList.remove('hidden');
+        // Optionally clear fields and error messages
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('loginError').classList.add('hidden');
+    }
+
+    hideLoginModal() {
+        document.getElementById('loginSection').classList.add('hidden');
+    }
+
+    async handleLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const loginError = document.getElementById('loginError');
+
+        // 실제 환경에서는 백엔드 API를 호출하여 인증
+        // 여기서는 간단한 임시 인증
+        if (username === 'admin' && password === 'admin123') {
+            isLoggedIn = true;
+            currentUser = username;
+            this.hideLoginModal();
+            document.getElementById('loginBtn').classList.add('hidden');
+            document.getElementById('logoutBtn').classList.remove('hidden');
+            alert('로그인 성공!');
+        } else {
+            loginError.classList.remove('hidden');
         }
     }
-    
-    setupTheme() {
-        // Set initial theme to dark
-        document.documentElement.setAttribute('data-color-scheme', this.currentTheme);
-        this.updateThemeButton();
+
+    logout() {
+        isLoggedIn = false;
+        currentUser = null;
+        document.getElementById('loginBtn').classList.remove('hidden');
+        document.getElementById('logoutBtn').classList.add('hidden');
+        alert('로그아웃되었습니다.');
     }
-    
+
     toggleTheme() {
-        this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-color-scheme', this.currentTheme);
-        this.updateThemeButton();
+        const currentScheme = document.documentElement.getAttribute('data-color-scheme');
+        if (currentScheme === 'dark') {
+            document.documentElement.setAttribute('data-color-scheme', 'light');
+            this.currentTheme = 'light';
+            document.getElementById('themeToggle').textContent = '☀️ 라이트모드';
+        } else {
+            document.documentElement.setAttribute('data-color-scheme', 'dark');
+            this.currentTheme = 'dark';
+            document.getElementById('themeToggle').textContent = '🌙 다크모드';
+        }
+        localStorage.setItem('theme', this.currentTheme);
     }
-    
-    updateThemeButton() {
-        const btn = document.getElementById('themeToggle');
-        if (btn) {
-            btn.textContent = this.currentTheme === 'dark' ? '☀️ 라이트모드' : '🌙 다크모드';
+
+    setupTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-color-scheme', savedTheme);
+            this.currentTheme = savedTheme;
+            document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '🌙 다크모드' : '☀️ 라이트모드';
+        } else {
+            // 기본은 다크모드로 설정
+            document.documentElement.setAttribute('data-color-scheme', 'dark');
+            this.currentTheme = 'dark';
+            document.getElementById('themeToggle').textContent = '🌙 다크모드';
         }
     }
-    
-    navigateToSection(section) {
-        // Hide all sections
-        const sections = document.querySelectorAll('.hero, .categories, .products-section, .calculator-section, .guide-section');
-        sections.forEach(el => {
-            el.classList.add('hidden');
-        });
-        
-        // Update nav active state
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.classList.remove('active');
-        });
-        
-        // Show selected section
-        this.currentSection = section;
-        
-        switch (section) {
-            case 'home':
-                const heroSection = document.querySelector('.hero');
-                const categoriesSection = document.querySelector('.categories');
-                if (heroSection) heroSection.classList.remove('hidden');
-                if (categoriesSection) categoriesSection.classList.remove('hidden');
-                break;
-            case 'products':
-                const productsSection = document.getElementById('productsSection');
-                if (productsSection) {
-                    productsSection.classList.remove('hidden');
-                    this.renderProducts();
-                }
-                break;
-            case 'calculator':
-                const calculatorSection = document.getElementById('calculatorSection');
-                if (calculatorSection) calculatorSection.classList.remove('hidden');
-                break;
-            case 'guide':
-                const guideSection = document.getElementById('guideSection');
-                if (guideSection) guideSection.classList.remove('hidden');
-                break;
-        }
-        
-        // Update active nav item
-        const navItem = document.querySelector(`[data-section="${section}"]`);
-        if (navItem) navItem.classList.add('active');
+
+    showLoading(show) {
+        document.getElementById('loading').classList.toggle('hidden', !show);
     }
-    
+
     renderCategories() {
-        const grid = document.getElementById('categoryGrid');
-        if (!grid) return;
-        
-        grid.innerHTML = '';
-        
-        Object.entries(this.categories).forEach(([category, count]) => {
+        const categoryGrid = document.getElementById('categoryGrid');
+        categoryGrid.innerHTML = '';
+        for (const categoryName in this.categories) {
             const card = document.createElement('div');
-            card.className = 'category-card';
+            card.classList.add('category-card');
+            card.dataset.category = categoryName;
             card.innerHTML = `
-                <div class="category-card__header">
-                    <h4 class="category-card__title">${category}</h4>
-                    <div class="category-card__count">${count.toLocaleString()}</div>
-                </div>
-                <div class="category-card__description">
-                    ${this.getCategoryDescription(category)}
-                </div>
+                <img src="https://via.placeholder.com/100" alt="${categoryName}">
+                <h4>${categoryName}</h4>
             `;
-            
-            card.addEventListener('click', () => {
-                this.filterByCategory(category);
-                this.navigateToSection('products');
-            });
-            
-            grid.appendChild(card);
-        });
-    }
-    
-    getCategoryDescription(category) {
-        const descriptions = {
-            "Drive Chain": "고품질 드라이브 체인 - 산업용 전력 전달 솔루션",
-            "Sprocket": "정밀 가공 스프로켓 - 다양한 체인과 호환",
-            "Conveyor Chain": "컨베이어 체인 - 물질 이송 시스템용",
-            "Timing Belt": "타이밍 벨트 - 정확한 동기 전력 전달",
-            "Reducer": "감속기 - 효율적인 속도 제어",
-            "Coupling": "커플링 - 축 연결 솔루션",
-            "Linear Actuator": "리니어 액추에이터 - 직선 운동 제어",
-            "Cable Carrier": "케이블 캐리어 - 케이블 보호 시스템"
-        };
-        return descriptions[category] || "고품질 산업용 제품";
-    }
-    
-    setupFilters() {
-        if (this.products.length === 0) return;
-        
-        // Setup category filter
-        const categoryFilter = document.getElementById('categoryFilter');
-        if (categoryFilter) {
-            // Clear existing options except first one
-            categoryFilter.innerHTML = '<option value="">모든 카테고리</option>';
-            const categories = [...new Set(this.products.map(p => p.category))];
-            categories.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categoryFilter.appendChild(option);
-            });
-        }
-        
-        // Setup series filter
-        const seriesFilter = document.getElementById('seriesFilter');
-        if (seriesFilter) {
-            seriesFilter.innerHTML = '<option value="">모든 시리즈</option>';
-            const series = [...new Set(this.products.map(p => p.series).filter(Boolean))];
-            series.forEach(s => {
-                const option = document.createElement('option');
-                option.value = s;
-                option.textContent = s;
-                seriesFilter.appendChild(option);
-            });
-        }
-        
-        // Setup pitch filter
-        const pitchFilter = document.getElementById('pitchFilter');
-        if (pitchFilter) {
-            pitchFilter.innerHTML = '<option value="">모든 피치</option>';
-            const pitches = [...new Set(this.products.map(p => p.specifications?.pitch_mm).filter(Boolean))];
-            pitches.sort((a, b) => a - b).forEach(pitch => {
-                const option = document.createElement('option');
-                option.value = pitch;
-                option.textContent = `${pitch}mm`;
-                pitchFilter.appendChild(option);
-            });
-        }
-        
-        // Setup material filter
-        const materialFilter = document.getElementById('materialFilter');
-        if (materialFilter) {
-            materialFilter.innerHTML = '<option value="">모든 재료</option>';
-            const materials = [...new Set(this.products.map(p => p.specifications?.material).filter(Boolean))];
-            materials.forEach(material => {
-                const option = document.createElement('option');
-                option.value = material;
-                option.textContent = material;
-                materialFilter.appendChild(option);
-            });
+            categoryGrid.appendChild(card);
         }
     }
-    
-    performSearch() {
-        const mainSearch = document.getElementById('mainSearch');
-        if (!mainSearch) return;
-        
-        const query = mainSearch.value.trim().toLowerCase();
-        if (!query) return;
-        
-        this.filteredProducts = this.products.filter(product => 
-            product.name.toLowerCase().includes(query) ||
-            product.model.toLowerCase().includes(query) ||
-            product.tsubaki_code.toLowerCase().includes(query) ||
-            product.category.toLowerCase().includes(query)
-        );
-        
-        this.currentPage = 1;
-        this.navigateToSection('products');
-    }
-    
+
     filterByCategory(category) {
-        const categoryFilter = document.getElementById('categoryFilter');
-        if (categoryFilter) {
-            categoryFilter.value = category;
-        }
-        this.applyFilters();
-    }
-    
-    applyFilters() {
-        const categoryFilter = document.getElementById('categoryFilter');
-        const seriesFilter = document.getElementById('seriesFilter');
-        const pitchFilter = document.getElementById('pitchFilter');
-        const materialFilter = document.getElementById('materialFilter');
-        
-        const categoryValue = categoryFilter ? categoryFilter.value : '';
-        const seriesValue = seriesFilter ? seriesFilter.value : '';
-        const pitchValue = pitchFilter ? pitchFilter.value : '';
-        const materialValue = materialFilter ? materialFilter.value : '';
-        
-        this.filteredProducts = this.products.filter(product => {
-            return (!categoryValue || product.category === categoryValue) &&
-                   (!seriesValue || product.series === seriesValue) &&
-                   (!pitchValue || product.specifications?.pitch_mm == pitchValue) &&
-                   (!materialValue || product.specifications?.material === materialValue);
-        });
-        
+        this.filteredProducts = this.products.filter(product => product.category === category);
         this.currentPage = 1;
+        this.showSection('products');
         this.renderProducts();
+        document.getElementById('currentCategoryTitle').textContent = category;
     }
-    
-    clearFilters() {
-        const categoryFilter = document.getElementById('categoryFilter');
-        const seriesFilter = document.getElementById('seriesFilter');
-        const pitchFilter = document.getElementById('pitchFilter');
-        const materialFilter = document.getElementById('materialFilter');
-        
-        if (categoryFilter) categoryFilter.value = '';
-        if (seriesFilter) seriesFilter.value = '';
-        if (pitchFilter) pitchFilter.value = '';
-        if (materialFilter) materialFilter.value = '';
-        
+
+    showAllProducts() {
         this.filteredProducts = [...this.products];
         this.currentPage = 1;
+        this.showSection('products');
+        this.renderProducts();
+        document.getElementById('currentCategoryTitle').textContent = '모든 제품';
+    }
+
+    searchProducts(query) {
+        const lowerCaseQuery = query.toLowerCase();
+        this.filteredProducts = this.products.filter(product => {
+            const nameMatch = product.name && product.name.toLowerCase().includes(lowerCaseQuery);
+            const descriptionMatch = product.description && product.description.toLowerCase().includes(lowerCaseQuery);
+            const categoryMatch = product.category && product.category.toLowerCase().includes(lowerCaseQuery);
+            // specifications 객체 내의 값 검색
+            const specMatch = product.specifications && Object.values(product.specifications).some(spec => 
+                typeof spec === 'string' && spec.toLowerCase().includes(lowerCaseQuery)
+            );
+            return nameMatch || descriptionMatch || categoryMatch || specMatch;
+        });
+        this.currentPage = 1;
         this.renderProducts();
     }
-    
+
+    sortProducts(criteria) {
+        if (criteria === 'name-asc') {
+            this.filteredProducts.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+        } else if (criteria === 'name-desc') {
+            this.filteredProducts.sort((a, b) => (b.name || '').localeCompare(a.name || ''));
+        } else if (criteria === 'price-asc') {
+            this.filteredProducts.sort((a, b) => (a.price || 0) - (b.price || 0));
+        } else if (criteria === 'price-desc') {
+            this.filteredProducts.sort((a, b) => (b.price || 0) - (a.price || 0));
+        }
+        this.renderProducts();
+    }
+
     renderProducts() {
-        const grid = document.getElementById('productsGrid');
-        const resultsCount = document.getElementById('resultsCount');
-        
-        if (!grid || !resultsCount) return;
-        
-        // Update results count
-        resultsCount.textContent = `${this.filteredProducts.length.toLocaleString()}개 제품`;
-        
-        // Calculate pagination
-        const startIndex = (this.currentPage - 1) * this.pageSize;
-        const endIndex = startIndex + this.pageSize;
-        const pageProducts = this.filteredProducts.slice(startIndex, endIndex);
-        
-        // Render products
-        grid.innerHTML = '';
-        
-        pageProducts.forEach(product => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.innerHTML = this.createProductCardHTML(product);
-            
-            card.addEventListener('click', () => this.showProductDetails(product));
-            grid.appendChild(card);
-        });
-        
-        this.renderPagination();
-    }
-    
-    createProductCardHTML(product) {
-        return `
-            <div class="product-card__header">
-                <h4 class="product-card__title">${product.name}</h4>
-                <div class="product-card__code">${product.tsubaki_code}</div>
-            </div>
-            <div class="product-card__body">
-                <ul class="product-specs">
-                    <li>
-                        <span class="spec-label">카테고리</span>
-                        <span class="spec-value">${product.category}</span>
-                    </li>
-                    <li>
-                        <span class="spec-label">시리즈</span>
-                        <span class="spec-value">${product.series || 'N/A'}</span>
-                    </li>
-                    ${product.specifications?.pitch_mm ? `
-                    <li>
-                        <span class="spec-label">피치</span>
-                        <span class="spec-value">${product.specifications.pitch_mm}mm</span>
-                    </li>
-                    ` : ''}
-                    ${product.specifications?.material ? `
-                    <li>
-                        <span class="spec-label">재료</span>
-                        <span class="spec-value">${product.specifications.material}</span>
-                    </li>
-                    ` : ''}
-                </ul>
-                ${product.features ? `
-                <div class="feature-tags">
-                    ${product.features.slice(0, 3).map(feature => 
-                        `<span class="feature-tag">${feature}</span>`
-                    ).join('')}
-                </div>
-                ` : ''}
-            </div>
-        `;
-    }
-    
-    renderPagination() {
-        const pagination = document.getElementById('pagination');
-        if (!pagination) return;
-        
-        const totalPages = Math.ceil(this.filteredProducts.length / this.pageSize);
-        
-        pagination.innerHTML = '';
-        
-        if (totalPages <= 1) return;
-        
-        // Previous button
-        const prevBtn = document.createElement('button');
-        prevBtn.className = 'page-btn';
-        prevBtn.textContent = '이전';
-        prevBtn.disabled = this.currentPage === 1;
-        prevBtn.addEventListener('click', () => {
-            if (this.currentPage > 1) {
-                this.currentPage--;
-                this.renderProducts();
-            }
-        });
-        pagination.appendChild(prevBtn);
-        
-        // Page numbers
-        const startPage = Math.max(1, this.currentPage - 2);
-        const endPage = Math.min(totalPages, this.currentPage + 2);
-        
-        for (let i = startPage; i <= endPage; i++) {
-            const pageBtn = document.createElement('button');
-            pageBtn.className = `page-btn ${i === this.currentPage ? 'active' : ''}`;
-            pageBtn.textContent = i;
-            pageBtn.addEventListener('click', () => {
-                this.currentPage = i;
-                this.renderProducts();
+        const productGrid = document.getElementById('productGrid');
+        productGrid.innerHTML = '';
+        const start = (this.currentPage - 1) * this.pageSize;
+        const end = start + this.pageSize;
+        const productsToDisplay = this.filteredProducts.slice(start, end);
+
+        if (productsToDisplay.length === 0) {
+            productGrid.innerHTML = '<p class="no-results">검색 결과가 없습니다.</p>';
+        } else {
+            productsToDisplay.forEach(product => {
+                const card = document.createElement('div');
+                card.classList.add('product-card');
+                card.innerHTML = `
+                    <img src="${product.image || 'https://via.placeholder.com/150'}" alt="${product.name || '제품 이미지'}">
+                    <h4>${product.name || '이름 없음'}</h4>
+                    <p class="product-category">${product.category || '미분류'}</p>
+                    <p>${product.description ? product.description.substring(0, 100) + '...' : '설명 없음'}</p>
+                    <button class="view-details-btn" data-product-id="${product.id}">자세히 보기</button>
+                `;
+                productGrid.appendChild(card);
             });
-            pagination.appendChild(pageBtn);
         }
         
-        // Next button
-        const nextBtn = document.createElement('button');
-        nextBtn.className = 'page-btn';
-        nextBtn.textContent = '다음';
-        nextBtn.disabled = this.currentPage === totalPages;
-        nextBtn.addEventListener('click', () => {
-            if (this.currentPage < totalPages) {
-                this.currentPage++;
-                this.renderProducts();
-            }
+        document.querySelectorAll('.view-details-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const productId = parseInt(e.target.dataset.productId);
+                this.showProductDetails(productId);
+            });
         });
-        pagination.appendChild(nextBtn);
+
+        this.updatePagination();
     }
-    
-    showProductDetails(product) {
-        const modal = document.getElementById('productModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalBody = document.getElementById('modalBody');
-        
-        if (!modal || !modalTitle || !modalBody) return;
-        
-        modalTitle.textContent = product.name;
-        modalBody.innerHTML = this.createProductDetailsHTML(product);
-        
-        modal.classList.remove('hidden');
+
+    updatePagination() {
+        const totalPages = Math.ceil(this.filteredProducts.length / this.pageSize);
+        document.getElementById('currentPageSpan').textContent = this.currentPage;
+        document.getElementById('totalPagesSpan').textContent = totalPages;
+        document.getElementById('prevPage').disabled = this.currentPage === 1;
+        document.getElementById('nextPage').disabled = this.currentPage === totalPages || totalPages === 0;
     }
-    
-    createProductDetailsHTML(product) {
-        return `
-            <div class="product-details">
-                <div class="detail-section">
-                    <h4>기본 정보</h4>
-                    <ul class="product-specs">
-                        <li>
-                            <span class="spec-label">Tsubaki 코드</span>
-                            <span class="spec-value">${product.tsubaki_code}</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">모델</span>
-                            <span class="spec-value">${product.model}</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">카테고리</span>
-                            <span class="spec-value">${product.category}</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">시리즈</span>
-                            <span class="spec-value">${product.series || 'N/A'}</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                ${product.specifications ? `
-                <div class="detail-section">
-                    <h4>기술 사양</h4>
-                    <ul class="product-specs">
-                        ${Object.entries(product.specifications).map(([key, value]) => `
-                            <li>
-                                <span class="spec-label">${this.formatSpecLabel(key)}</span>
-                                <span class="spec-value">${value}</span>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>
-                ` : ''}
-                
-                ${product.features ? `
-                <div class="detail-section">
-                    <h4>주요 특징</h4>
-                    <ul style="list-style: disc; padding-left: 20px;">
-                        ${product.features.map(feature => `<li>${feature}</li>`).join('')}
-                    </ul>
-                </div>
-                ` : ''}
-                
-                ${product.applications ? `
-                <div class="detail-section">
-                    <h4>응용 분야</h4>
-                    <ul style="list-style: disc; padding-left: 20px;">
-                        ${product.applications.map(app => `<li>${app}</li>`).join('')}
-                    </ul>
-                </div>
-                ` : ''}
-            </div>
-        `;
+
+    changePage(direction) {
+        const totalPages = Math.ceil(this.filteredProducts.length / this.pageSize);
+        this.currentPage += direction;
+        if (this.currentPage < 1) this.currentPage = 1;
+        if (this.currentPage > totalPages) this.currentPage = totalPages;
+        this.renderProducts();
     }
-    
-    formatSpecLabel(key) {
-        const labels = {
-            pitch_mm: '피치 (mm)',
-            pitch_inch: '피치 (inch)',
-            strands: '스트랜드 수',
-            tensile_strength_kn: '인장강도 (kN)',
-            allowable_load_kn: '허용하중 (kN)',
-            weight_kg_per_m: '중량 (kg/m)',
-            material: '재료',
-            temperature_range: '온도 범위',
-            compatible_chain: '호환 체인',
-            tooth_count: '잇수',
-            pitch_diameter_mm: '피치 직경 (mm)',
-            outside_diameter_mm: '외경 (mm)',
-            hub_type: '허브 타입',
-            hardness: '경도',
-            lubrication: '윤활'
-        };
-        return labels[key] || key;
-    }
-    
-    closeModal() {
-        const modal = document.getElementById('productModal');
-        if (modal) {
-            modal.classList.add('hidden');
-        }
-    }
-    
-    switchCalculatorTab(tab) {
-        // Update tab buttons
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        const activeTab = document.querySelector(`[data-tab="${tab}"]`);
-        if (activeTab) {
-            activeTab.classList.add('active');
-        }
-        
-        // Show/hide panels
-        document.querySelectorAll('.calculator-panel').forEach(panel => {
-            panel.classList.add('hidden');
-        });
-        
-        if (tab === 'scientific') {
-            const scientificCalc = document.getElementById('scientificCalc');
-            if (scientificCalc) scientificCalc.classList.remove('hidden');
-        } else if (tab === 'chain') {
-            const chainCalc = document.getElementById('chainCalc');
-            if (chainCalc) chainCalc.classList.remove('hidden');
-        }
-    }
-    
-    exportData() {
-        const csvContent = this.convertToCSV(this.filteredProducts);
-        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-        const link = document.createElement('a');
-        const url = URL.createObjectURL(blob);
-        
-        link.setAttribute('href', url);
-        link.setAttribute('download', 'tsubaki_products.csv');
-        link.style.visibility = 'hidden';
-        
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-    
-    convertToCSV(products) {
-        const headers = ['ID', '이름', '모델', '카테고리', '시리즈', 'Tsubaki 코드'];
-        const csvRows = [headers.join(',')];
-        
-        products.forEach(product => {
-            const row = [
-                product.id,
-                `"${product.name}"`,
-                `"${product.model}"`,
-                product.category,
-                product.series || '',
-                product.tsubaki_code
-            ];
-            csvRows.push(row.join(','));
-        });
-        
-        return csvRows.join('\n');
-    }
-    
-    showLoading(show) {
-        const loading = document.getElementById('loading');
-        if (loading) {
-            if (show) {
-                loading.classList.remove('hidden');
+
+    showProductDetails(productId) {
+        const product = this.products.find(p => p.id === productId);
+        if (product) {
+            document.getElementById('modalProductImage').src = product.image || 'https://via.placeholder.com/200';
+            document.getElementById('modalProductName').textContent = product.name || '이름 없음';
+            document.getElementById('modalProductCategory').textContent = `카테고리: ${product.category || '미분류'}`;
+            document.getElementById('modalProductDescription').textContent = product.description || '설명 없음';
+            document.getElementById('modalProductPrice').textContent = `가격: $${product.price ? product.price.toFixed(2) : 'N/A'}`;
+            
+            const specList = document.getElementById('modalProductSpecs');
+            specList.innerHTML = '';
+            if (product.specifications) {
+                for (const key in product.specifications) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${key}: ${product.specifications[key]}`;
+                    specList.appendChild(listItem);
+                }
             } else {
-                loading.classList.add('hidden');
+                specList.innerHTML = '<li>제공되는 사양 없음</li>';
             }
+
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+    }
+
+    closeModal() {
+        document.getElementById('productModal').classList.add('hidden');
+    }
+
+    showSection(sectionId) {
+        this.currentSection = sectionId;
+        document.querySelectorAll('main > section').forEach(section => {
+            section.classList.add('hidden');
+        });
+        document.getElementById('loginSection').classList.add('hidden'); // 로그인 섹션도 숨김
+        document.getElementById(`${sectionId}Section`).classList.remove('hidden');
+
+        document.querySelectorAll('.nav-item').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector(`.nav-item[data-section="${sectionId}"]`).classList.add('active');
+
+        // 제품 섹션으로 이동할 때 항상 초기화 및 렌더링
+        if (sectionId === 'products') {
+            // this.filteredProducts = [...this.products]; // 모든 제품 보여주기로 초기화 (선택 사항)
+            // this.currentPage = 1;
+            // this.renderProducts();
+            // productSection 내의 다른 요소들은 그대로 둠 (검색, 필터 등)
+            document.getElementById('currentCategoryTitle').textContent = '모든 제품'; // 또는 현재 선택된 카테고리 이름
+        } else if (sectionId === 'home') {
+            document.getElementById('productSection').classList.add('hidden'); // 제품 섹션 숨기기
         }
     }
 }
 
-// Calculator Functions
-function clearCalc() {
-    const display = document.getElementById('calcDisplay');
-    if (display) {
-        display.value = '';
-    }
-}
+// 계산기 로직 (기존과 동일)
+let currentInput = '0';
+let currentOperator = null;
+let firstOperand = null;
+const calculatorDisplay = document.getElementById('calcDisplay');
 
-function deleteLast() {
-    const display = document.getElementById('calcDisplay');
-    if (display) {
-        display.value = display.value.slice(0, -1);
+function updateDisplay() {
+    if (calculatorDisplay) {
+        calculatorDisplay.textContent = currentInput;
     }
 }
 
 function appendToCalc(value) {
-    const display = document.getElementById('calcDisplay');
-    if (display) {
-        display.value += value;
+    if (currentInput === '0' && value !== '.') {
+        currentInput = value;
+    } else {
+        currentInput += value;
     }
+    updateDisplay();
+}
+
+function clearCalc() {
+    currentInput = '0';
+    currentOperator = null;
+    firstOperand = null;
+    updateDisplay();
+}
+
+function setOperator(operator) {
+    if (firstOperand === null) {
+        firstOperand = parseFloat(currentInput);
+    } else if (currentOperator) {
+        calculateResult();
+        firstOperand = parseFloat(currentInput);
+    }
+    currentOperator = operator;
+    currentInput = '0'; // 다음 숫자 입력을 위해 초기화
 }
 
 function calculateResult() {
-    const display = document.getElementById('calcDisplay');
-    if (!display) return;
-    
-    try {
-        // Replace × with * for evaluation
-        const expression = display.value.replace(/×/g, '*');
-        const result = eval(expression);
-        display.value = result;
-    } catch (error) {
-        display.value = 'Error';
+    if (firstOperand === null || currentOperator === null) {
+        return;
     }
+
+    const secondOperand = parseFloat(currentInput);
+    let result = 0;
+
+    switch (currentOperator) {
+        case '+':
+            result = firstOperand + secondOperand;
+            break;
+        case '-':
+            result = firstOperand - secondOperand;
+            break;
+        case '*':
+            result = firstOperand * secondOperand;
+            break;
+        case '/':
+            if (secondOperand === 0) {
+                result = 'Error';
+                alert('0으로 나눌 수 없습니다!');
+            } else {
+                result = firstOperand / secondOperand;
+            }
+            break;
+        default:
+            return;
+    }
+
+    currentInput = result.toString();
+    firstOperand = null;
+    currentOperator = null;
+    updateDisplay();
 }
 
+// 체인 속도 계산기 함수 (기존과 동일)
 function calculateChainSpeed() {
     const pitchInput = document.getElementById('pitch');
     const teethInput = document.getElementById('teeth');
@@ -782,7 +507,7 @@ function calculateChainSpeed() {
         return;
     }
     
-    // V = (P × Z × N) / 1000
+    // V = (P × Z × N) / 1000 (m/min)
     const speed = (pitch * teeth * rpm) / 1000;
     
     resultDiv.innerHTML = `
@@ -796,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.tsubakiApp = new TsubakiDatabase();
 });
 
-// Keyboard shortcuts
+// Keyboard shortcuts (기존과 동일)
 document.addEventListener('keydown', (e) => {
     // ESC to close modal
     if (e.key === 'Escape') {
@@ -805,13 +530,30 @@ document.addEventListener('keydown', (e) => {
             window.tsubakiApp.closeModal();
         }
     }
-    
-    // Ctrl+F to focus search
-    if (e.ctrlKey && e.key === 'f') {
-        e.preventDefault();
-        const searchInput = document.getElementById('mainSearch');
-        if (searchInput) {
-            searchInput.focus();
+    // Basic Calculator keyboard support (옵션)
+    if (document.getElementById('basicCalc') && !document.getElementById('basicCalc').classList.contains('hidden')) {
+        if (e.key >= '0' && e.key <= '9') {
+            appendToCalc(e.key);
+        } else if (e.key === '.') {
+            appendToCalc('.');
+        } else if (e.key === '+') {
+            setOperator('+');
+        } else if (e.key === '-') {
+            setOperator('-');
+        } else if (e.key === '*') {
+            setOperator('*');
+        } else if (e.key === '/') {
+            setOperator('/');
+        } else if (e.key === 'Enter' || e.key === '=') {
+            calculateResult();
+            e.preventDefault(); // Enter 키 기본 동작 방지
+        } else if (e.key === 'Backspace') {
+            if (currentInput.length > 1) {
+                currentInput = currentInput.slice(0, -1);
+            } else {
+                currentInput = '0';
+            }
+            updateDisplay();
         }
     }
 });

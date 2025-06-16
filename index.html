@@ -13,6 +13,7 @@
     </div>
     <div class="header__controls">
       <button id="loginBtn">🔐 로그인</button>
+      <button id="signupBtn">📝 회원가입</button>
       <button id="logoutBtn" class="hidden">🚪 로그아웃</button>
       <button id="themeToggle">🌙 다크모드</button>
     </div>
@@ -27,6 +28,15 @@
       <p id="loginError" class="error-message hidden">❌ 로그인 실패</p>
     </div>
   </div>
+  <div id="signupSection" class="hidden login-section">
+    <div class="login-form">
+      <h2>회원가입</h2>
+      <input type="text" id="newUsername" placeholder="아이디" />
+      <input type="password" id="newPassword" placeholder="비밀번호" />
+      <button id="submitSignup">가입</button>
+      <p id="signupError" class="error-message hidden">❌ 회원가입 실패</p>
+    </div>
+  </div>
 
   <main>
     <section class="hero">
@@ -37,27 +47,43 @@
     <section class="categories">
       <h3>제품 카테고리</h3>
       <div id="categoryGrid" class="grid"></div>
+      <button id="showAllProductsBtn">모든 제품 보기</button>
     </section>
 
     <section id="productsSection" class="products-section hidden">
+      <button id="backToHomeFromProducts">← 홈으로</button>
+      <h3 id="currentCategoryTitle">모든 제품</h3>
       <div class="filters">
         <input type="text" id="mainSearch" placeholder="모델명 또는 코드 검색" />
         <select id="categoryFilter"></select>
         <select id="seriesFilter"></select>
         <select id="pitchFilter"></select>
         <select id="materialFilter"></select>
+        <select id="sortSelect">
+          <option value="name-asc">이름 오름차순</option>
+          <option value="name-desc">이름 내림차순</option>
+        </select>
         <button id="searchBtn">검색</button>
         <button id="clearFilters">초기화</button>
       </div>
       <div id="resultsCount"></div>
       <div id="productsGrid" class="grid"></div>
-      <div id="pagination" class="pagination"></div>
+      <div id="pagination" class="pagination">
+        <button id="prevPage">이전</button>
+        <span id="currentPageSpan">1</span> / <span id="totalPagesSpan">1</span>
+        <button id="nextPage">다음</button>
+      </div>
       <button id="exportBtn">CSV로 내보내기</button>
     </section>
 
     <section id="calculatorSection" class="calculator-section hidden">
       <button id="backToHomeFromCalc">← 홈으로</button>
       <h3>계산기</h3>
+      <label for="calcTypeToggle" class="hidden">계산기 종류</label>
+      <select id="calcTypeToggle">
+        <option value="basic">일반</option>
+        <option value="chain">체인 속도</option>
+      </select>
       <div class="tabs">
         <button class="tab-btn active" data-tab="scientific">일반 계산기</button>
         <button class="tab-btn" data-tab="chain">체인 속도 계산기</button>
@@ -116,7 +142,7 @@
   <div id="productModal" class="modal hidden">
     <div class="modal-backdrop" id="modalBackdrop"></div>
     <div class="modal-content">
-      <button class="modal-close" id="modalClose">✖</button>
+      <button class="modal-close" id="closeModal">✖</button>
       <h3 id="modalTitle"></h3>
       <div id="modalBody"></div>
     </div>

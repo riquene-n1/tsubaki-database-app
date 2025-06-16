@@ -3,6 +3,7 @@
 const express = require('express');
 const oracledb = require('oracledb');
 const cors = require('cors'); // CORS 미들웨어
+const bcrypt = require('bcryptjs');
 
 // Node.js 애플리케이션 포트 설정
 const PORT = process.env.PORT || 3000;
@@ -10,12 +11,12 @@ const PORT = process.env.PORT || 3000;
 // Oracle DB 연결 설정
 // 보안을 위해 실제 운영 환경에서는 비밀번호를 환경 변수, Vault 서비스 등을 통해 관리해야 합니다.
 const dbConfig = {
-    user: "TSUBAKIAPP",
-    password: "tsubaki1234",
-    connectString: "localhost:1521/XEPDB1"
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    connectString: process.env.DB_CONNECT_STRING
 };
-
 const app = express();
+app.use(express.json());
 
 // CORS 설정: 모든 출처에서의 요청을 허용합니다. (개발 환경용)
 // 실제 운영 환경에서는 보안을 위해 특정 도메인만 허용하도록 변경해야 합니다.
@@ -28,15 +29,20 @@ app.use(cors());
 // Windows: 'C:\instantclient-basic-windows.x64-23.8.0.25.04\instantclient_23_8'
 // macOS: '/Users/yourusername/Downloads/instantclient_21_9'
 // Linux: '/opt/oracle/instantclient_21_9'
-try {
-    oracledb.initOracleClient({ libDir: 'C:\\instantclient-basic-windows.x64-23.8.0.25.04\\instantclient_23_8' }); // <-- 이 부분을 수정하세요!
-    console.log('Oracle Client initialized successfully.');
-} catch (err) {
-    console.error('Error initializing Oracle Client:', err);
-    console.error('Please ensure Oracle Instant Client is installed and libDir path is correct.');
-    process.exit(1); // 클라이언트 초기화 실패 시 애플리케이션 종료
-}
 
+const clientLibDir = process.env.ORACLE_CLIENT_LIBDIR;
+if (clientLibDir) {
+    try {
+        oracledb.initOracleClient({ libDir: clientLibDir });
+        console.log('Oracle Client initialized successfully.');
+    } catch (err) {
+        console.error('Error initializing Oracle Client:', err);
+        console.error('Please ensure Oracle Instant Client is installed and libDir path is correct.');
+        process.exit(1);
+    }
+} else {
+    console.warn('ORACLE_CLIENT_LIBDIR 환경 변수가 설정되지 않았습니다. 기본 경로를 사용합니다.');
+}
 // 각 테이블에 대한 API 엔드포인트 정의
 // 이 배열의 각 문자열은 Oracle DB의 실제 테이블 이름과 일치해야 합니다.
 const tables = [
@@ -104,6 +110,73 @@ tables.forEach(tableName => {
             }
         }
     });
+});
+
+// 회원가입
+app.post('/api/register', async (req, res) => {
+    const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).send('Missing username or password');
+    }
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        const hashed = await bcrypt.hash(password, 10);
+        await connection.execute(
+            `INSERT INTO USERS (USERNAME, PASSWORD_HASH) VALUES (:u, :p)`,
+            { u: username, p: hashed },
+            { autoCommit: true }
+        );
+        res.status(201).send('User registered');
+    } catch (err) {
+        console.error('Error registering user:', err);
+        res.status(500).send('Registration failed');
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error closing Oracle connection:', err);
+            }
+        }
+    }
+});
+
+// 로그인
+app.post('/api/login', async (req, res) => {
+    const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).send('Missing username or password');
+    }
+    let connection;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        const result = await connection.execute(
+            `SELECT PASSWORD_HASH FROM USERS WHERE USERNAME = :u`,
+            { u: username },
+            { outFormat: oracledb.OUT_FORMAT_OBJECT }
+        );
+        if (result.rows.length === 0) {
+            return res.status(401).send('Invalid credentials');
+        }
+        const hashed = result.rows[0].PASSWORD_HASH;
+        const match = await bcrypt.compare(password, hashed);
+        if (!match) {
+            return res.status(401).send('Invalid credentials');
+        }
+        res.json({ success: true });
+    } catch (err) {
+        console.error('Error logging in:', err);
+        res.status(500).send('Login failed');
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error closing Oracle connection:', err);
+            }
+        }
+    }
 });
 
 // 서버 시작
